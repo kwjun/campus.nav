@@ -14,6 +14,7 @@
 		AEBDF42A1AC9884E00C0BBDE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBDF4291AC9884E00C0BBDE /* Images.xcassets */; };
 		AEBDF42D1AC9884E00C0BBDE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBDF42B1AC9884E00C0BBDE /* LaunchScreen.xib */; };
 		AEBDF4391AC9884E00C0BBDE /* MapProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4381AC9884E00C0BBDE /* MapProjectTests.m */; };
+		AEBDF4441AC9FCDC00C0BBDE /* 1427768975_0007_Location.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBDF4431AC9FCDC00C0BBDE /* 1427768975_0007_Location.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		AEBDF4321AC9884E00C0BBDE /* MapProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBDF4371AC9884E00C0BBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBDF4381AC9884E00C0BBDE /* MapProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapProjectTests.m; sourceTree = "<group>"; };
+		AEBDF4431AC9FCDC00C0BBDE /* 1427768975_0007_Location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1427768975_0007_Location.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		AEBDF41B1AC9884D00C0BBDE /* MapProject */ = {
 			isa = PBXGroup;
 			children = (
+				AEBDF4421AC9FCC600C0BBDE /* images */,
 				AEBDF4201AC9884D00C0BBDE /* AppDelegate.h */,
 				AEBDF4211AC9884D00C0BBDE /* AppDelegate.m */,
 				AEBDF4231AC9884D00C0BBDE /* ViewController.h */,
@@ -117,6 +120,14 @@
 				AEBDF4371AC9884E00C0BBDE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEBDF4421AC9FCC600C0BBDE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AEBDF4431AC9FCDC00C0BBDE /* 1427768975_0007_Location.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEBDF4281AC9884D00C0BBDE /* Main.storyboard in Resources */,
+				AEBDF4441AC9FCDC00C0BBDE /* 1427768975_0007_Location.png in Resources */,
 				AEBDF42D1AC9884E00C0BBDE /* LaunchScreen.xib in Resources */,
 				AEBDF42A1AC9884E00C0BBDE /* Images.xcassets in Resources */,
 			);
