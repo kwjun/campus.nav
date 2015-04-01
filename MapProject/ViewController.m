@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Alex Estrop. All rights reserved.
 //
 
-//Gordon was here
+//Gordon was here lol
 
 #import "ViewController.h"
 
