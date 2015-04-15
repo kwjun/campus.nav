@@ -106,6 +106,39 @@
             </objects>
             <point key="canvasLocation" x="688" y="723"/>
         </scene>
+        <!--Edit Classroom View Controller-->
+        <scene sceneID="tYm-ca-cfI">
+            <objects>
+                <viewController id="MJs-Sc-H4w" customClass="EditClassroomViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cL1-wB-R6p"/>
+                        <viewControllerLayoutGuide type="bottom" id="p5g-cV-m3J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mZS-LX-218">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OuU-mI-Eoc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Edit Classroom" id="2VV-Hp-rI8">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="xlS-hc-eAL"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tvm-wZ-XVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1051" y="-546"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="0QD-dA-rcx">
             <objects>
@@ -182,6 +215,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UEm-fN-uau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1051" y="82"/>
+        </scene>
+        <!--Add Classroom View Controller-->
+        <scene sceneID="zM1-io-6Aw">
+            <objects>
+                <viewController id="j6T-iZ-ypv" customClass="AddClassroomViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="caj-iN-C6L"/>
+                        <viewControllerLayoutGuide type="bottom" id="YR1-lP-hEb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zbU-j5-iV9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rHX-9T-r7t">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Add Classroom" id="fF4-g1-JBb">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="R9F-iB-G4C"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="inV-gw-gTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1436" y="82"/>
         </scene>
         <!--Favourites View Controller-->
         <scene sceneID="9IO-JX-fue">

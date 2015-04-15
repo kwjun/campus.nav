@@ -2,8 +2,15 @@
 //  FindClassroomViewController.h
 //  MapProject
 //
-//  Created by xcode on 2015-04-15.
-//  Copyright (c) 2015 Alex Estrop. All rights reserved.
+//  Created by Gordon Cox
+//
+//
+//   The classrooms displayed here will be recieved
+//   from a database that has been pre-populated, and these
+//   pages should usually only be displayed to adminisrators who
+//   can modify the information (such as room location, name, and description)
+//
+//
 //
 
 #import "ViewController.h"
