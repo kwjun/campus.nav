@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEADB2F91ADF173D00C8EF07 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB2F81ADF173D00C8EF07 /* MapViewController.m */; };
+		AEADB2FC1ADF180900C8EF07 /* FavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB2FB1ADF180900C8EF07 /* FavouritesViewController.m */; };
+		AEADB3001ADF18C000C8EF07 /* AddClassroomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB2FF1ADF18C000C8EF07 /* AddClassroomViewController.m */; };
 		AEBDF41F1AC9884D00C0BBDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF41E1AC9884D00C0BBDE /* main.m */; };
 		AEBDF4221AC9884D00C0BBDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4211AC9884D00C0BBDE /* AppDelegate.m */; };
 		AEBDF4251AC9884D00C0BBDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4241AC9884D00C0BBDE /* ViewController.m */; };
@@ -28,6 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AEADB2F71ADF173D00C8EF07 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		AEADB2F81ADF173D00C8EF07 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		AEADB2FA1ADF180900C8EF07 /* FavouritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritesViewController.h; sourceTree = "<group>"; };
+		AEADB2FB1ADF180900C8EF07 /* FavouritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesViewController.m; sourceTree = "<group>"; };
+		AEADB2FE1ADF18C000C8EF07 /* AddClassroomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClassroomViewController.h; sourceTree = "<group>"; };
+		AEADB2FF1ADF18C000C8EF07 /* AddClassroomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClassroomViewController.m; sourceTree = "<group>"; };
 		AEBDF4191AC9884D00C0BBDE /* MapProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBDF41D1AC9884D00C0BBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBDF41E1AC9884D00C0BBDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,6 +71,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AEADB2F31ADF168F00C8EF07 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		AEADB2F41ADF16B700C8EF07 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				AEBDF4261AC9884D00C0BBDE /* Main.storyboard */,
+				AEBDF42B1AC9884E00C0BBDE /* LaunchScreen.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		AEADB2F51ADF16BE00C8EF07 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AEBDF4231AC9884D00C0BBDE /* ViewController.h */,
+				AEBDF4241AC9884D00C0BBDE /* ViewController.m */,
+				AEADB2F71ADF173D00C8EF07 /* MapViewController.h */,
+				AEADB2F81ADF173D00C8EF07 /* MapViewController.m */,
+				AEADB2FA1ADF180900C8EF07 /* FavouritesViewController.h */,
+				AEADB2FB1ADF180900C8EF07 /* FavouritesViewController.m */,
+				AEADB2FE1ADF18C000C8EF07 /* AddClassroomViewController.h */,
+				AEADB2FF1ADF18C000C8EF07 /* AddClassroomViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AEADB2F61ADF16D700C8EF07 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AEBDF4201AC9884D00C0BBDE /* AppDelegate.h */,
+				AEBDF4211AC9884D00C0BBDE /* AppDelegate.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		AEBDF4101AC9884D00C0BBDE = {
 			isa = PBXGroup;
 			children = (
@@ -83,14 +132,12 @@
 		AEBDF41B1AC9884D00C0BBDE /* MapProject */ = {
 			isa = PBXGroup;
 			children = (
-				AEBDF4421AC9FCC600C0BBDE /* images */,
-				AEBDF4201AC9884D00C0BBDE /* AppDelegate.h */,
-				AEBDF4211AC9884D00C0BBDE /* AppDelegate.m */,
-				AEBDF4231AC9884D00C0BBDE /* ViewController.h */,
-				AEBDF4241AC9884D00C0BBDE /* ViewController.m */,
-				AEBDF4261AC9884D00C0BBDE /* Main.storyboard */,
+				AEADB2F41ADF16B700C8EF07 /* Nibs */,
+				AEADB2F51ADF16BE00C8EF07 /* View Controllers */,
+				AEADB2F61ADF16D700C8EF07 /* Data */,
+				AEADB2F31ADF168F00C8EF07 /* Database */,
+				AEBDF4421AC9FCC600C0BBDE /* Images */,
 				AEBDF4291AC9884E00C0BBDE /* Images.xcassets */,
-				AEBDF42B1AC9884E00C0BBDE /* LaunchScreen.xib */,
 				AEBDF41C1AC9884D00C0BBDE /* Supporting Files */,
 			);
 			path = MapProject;
@@ -122,12 +169,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AEBDF4421AC9FCC600C0BBDE /* images */ = {
+		AEBDF4421AC9FCC600C0BBDE /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				AEBDF4431AC9FCDC00C0BBDE /* 1427768975_0007_Location.png */,
 			);
-			name = images;
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEADB3001ADF18C000C8EF07 /* AddClassroomViewController.m in Sources */,
+				AEADB2FC1ADF180900C8EF07 /* FavouritesViewController.m in Sources */,
 				AEBDF4251AC9884D00C0BBDE /* ViewController.m in Sources */,
 				AEBDF4221AC9884D00C0BBDE /* AppDelegate.m in Sources */,
 				AEBDF41F1AC9884D00C0BBDE /* main.m in Sources */,
+				AEADB2F91ADF173D00C8EF07 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +476,7 @@
 				AEBDF43E1AC9884E00C0BBDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEBDF43F1AC9884E00C0BBDE /* Build configuration list for PBXNativeTarget "MapProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +485,7 @@
 				AEBDF4411AC9884E00C0BBDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="4kS-ln-ftn">
             <objects>
-                <viewController id="xa7-ZI-42B" sceneMemberID="viewController">
+                <viewController id="xa7-ZI-42B" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l9d-8n-MUk"/>
                         <viewControllerLayoutGuide type="bottom" id="VcM-p1-MmS"/>
@@ -19,12 +19,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Campus Navigator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cz-PT-utM">
                                 <rect key="frame" x="56" y="273" width="208" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright 2015 Alex Estrop, KwangJun Ko, Gordon Cox, Peter Liu" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIk-yR-LpD">
-                                <rect key="frame" x="43" y="500" width="373" height="60"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -43,6 +37,12 @@
                                 <rect key="frame" x="75" y="146" width="171" height="124"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright 2015 Alex Estrop, KwangJun Ko, Gordon Cox Peter Liu" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIk-yR-LpD">
+                                <rect key="frame" x="0.0" y="500" width="320" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="-88" y="58"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -138,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SL-3F-19J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="732" y="58"/>
+            <point key="canvasLocation" x="686" y="58"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="P3y-Gj-ReI">
@@ -181,10 +181,10 @@
             </objects>
             <point key="canvasLocation" x="-88" y="723"/>
         </scene>
-        <!--View Controller-->
+        <!--Favourites View Controller-->
         <scene sceneID="9IO-JX-fue">
             <objects>
-                <viewController id="2DN-sC-SKH" sceneMemberID="viewController">
+                <viewController id="2DN-sC-SKH" customClass="FavouritesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hgy-f4-T7P"/>
                         <viewControllerLayoutGuide type="bottom" id="AJY-NI-zsZ"/>
@@ -223,7 +223,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BI-QM-IdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="296" y="705"/>
+            <point key="canvasLocation" x="296" y="723"/>
+        </scene>
+        <!--Add Classroom View Controller-->
+        <scene sceneID="wm7-Po-tLJ">
+            <objects>
+                <viewController id="Ay6-eV-jyA" customClass="AddClassroomViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uEt-bR-qzF"/>
+                        <viewControllerLayoutGuide type="bottom" id="fjj-CJ-2px"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qOK-7F-gmd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G1V-Xe-psP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="723"/>
         </scene>
     </scenes>
     <resources>

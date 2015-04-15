@@ -1,14 +1,8 @@
 //
-//  ViewController.m
+//  ViewController.h
 //  MapProject
 //
-//  Created by xcode on 2015-03-30.
-//  Copyright (c) 2015 Alex Estrop. All rights reserved.
-//
-//more stuffsads fjlhfkejhfkjehewkjhhjgjh
-//Gordon was here lol sadsa
-
-//asdasdsa
+//  Created by Alex?
 
 #import "ViewController.h"
 
