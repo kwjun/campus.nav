@@ -140,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="325" y="723"/>
         </scene>
-        <!--View Controller-->
+        <!--Find Classroom View Controller-->
         <scene sceneID="P3y-Gj-ReI">
             <objects>
-                <viewController id="7rY-aH-xNB" sceneMemberID="viewController">
+                <viewController id="7rY-aH-xNB" customClass="FindClassroomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="whV-sK-83j"/>
                         <viewControllerLayoutGuide type="bottom" id="OQW-DF-k3o"/>
