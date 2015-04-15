@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXb-dP-dhd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-88" y="58"/>
+            <point key="canvasLocation" x="688" y="82"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="296" y="58"/>
+            <point key="canvasLocation" x="688" y="723"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0QD-dA-rcx">
@@ -138,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SL-3F-19J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="58"/>
+            <point key="canvasLocation" x="325" y="723"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="P3y-Gj-ReI">
@@ -159,7 +159,9 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Find A Classroom" id="3Gv-z6-AMO"/>
+                                    <navigationItem title="Find A Classroom" id="3Gv-z6-AMO">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="hfU-4x-iAF"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="46R-vg-xhc">
@@ -179,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UEm-fN-uau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-88" y="723"/>
+            <point key="canvasLocation" x="1051" y="82"/>
         </scene>
         <!--Favourites View Controller-->
         <scene sceneID="9IO-JX-fue">
@@ -223,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BI-QM-IdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="296" y="723"/>
+            <point key="canvasLocation" x="689" y="1411"/>
         </scene>
         <!--Add Favourites View Controller-->
         <scene sceneID="wm7-Po-tLJ">
@@ -296,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1V-Xe-psP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="723"/>
+            <point key="canvasLocation" x="325" y="1411"/>
         </scene>
         <!--Edit Favourites View Controller-->
         <scene sceneID="V0W-vZ-cy9">
@@ -369,7 +371,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juD-P6-Oxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="296" y="1398"/>
+            <point key="canvasLocation" x="1051" y="1411"/>
         </scene>
     </scenes>
     <resources>
