@@ -14,6 +14,8 @@ Possibly another database, with a way to add events that are around campus (just
 
 Gordon
   - ?
+  - 
+  
 Peter (so far)
   - MapViewController and supporting file
   - FavouritesViewController / supporting files
@@ -22,6 +24,8 @@ Peter (so far)
   
 Jun
   - ?
+  - 
+  
 Alex
   - Home Screen View controller
   - 
