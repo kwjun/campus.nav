@@ -13,7 +13,7 @@ So far Peter has used PLists for favourites (or so far they are just classrooms)
 Possibly another database, with a way to add events that are around campus (just for some more stuff to do).
 
 Gordon
-  -
+  - ?
 Peter (so far)
   - MapViewController and supporting file
   - FavouritesViewController / supporting files
@@ -21,7 +21,7 @@ Peter (so far)
   - EditFavouritesClassroom / supporting files
   
 Jun
-  -
+  - ?
 Alex
   - Home Screen View controller
   - 
