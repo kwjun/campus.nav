@@ -17,6 +17,7 @@
 		AEADB3151ADF333600C8EF07 /* SheridanWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3141ADF333600C8EF07 /* SheridanWebViewController.m */; };
 		AEADB3181ADF33DB00C8EF07 /* Classroom.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3171ADF33DB00C8EF07 /* Classroom.m */; };
 		AEADB31B1ADF342500C8EF07 /* ClassroomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB31A1ADF342500C8EF07 /* ClassroomTableViewCell.m */; };
+		AEADB3221ADF436D00C8EF07 /* DatabaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3211ADF436D00C8EF07 /* DatabaseDelegate.m */; };
 		AEBDF41F1AC9884D00C0BBDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF41E1AC9884D00C0BBDE /* main.m */; };
 		AEBDF4221AC9884D00C0BBDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4211AC9884D00C0BBDE /* AppDelegate.m */; };
 		AEBDF4251AC9884D00C0BBDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4241AC9884D00C0BBDE /* ViewController.m */; };
@@ -52,13 +53,15 @@
 		AEADB3081ADF1DCC00C8EF07 /* AddFavouritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFavouritesViewController.m; sourceTree = "<group>"; };
 		AEADB30B1ADF2C2000C8EF07 /* FindClassroomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindClassroomViewController.h; sourceTree = "<group>"; };
 		AEADB30C1ADF2C2000C8EF07 /* FindClassroomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindClassroomViewController.m; sourceTree = "<group>"; };
-		AEADB3111ADF30E000C8EF07 /* Classrooms.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = Classrooms.sql; sourceTree = "<group>"; };
 		AEADB3131ADF333600C8EF07 /* SheridanWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SheridanWebViewController.h; sourceTree = "<group>"; };
 		AEADB3141ADF333600C8EF07 /* SheridanWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SheridanWebViewController.m; sourceTree = "<group>"; };
 		AEADB3161ADF33DB00C8EF07 /* Classroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classroom.h; sourceTree = "<group>"; };
 		AEADB3171ADF33DB00C8EF07 /* Classroom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classroom.m; sourceTree = "<group>"; };
 		AEADB3191ADF342500C8EF07 /* ClassroomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassroomTableViewCell.h; sourceTree = "<group>"; };
 		AEADB31A1ADF342500C8EF07 /* ClassroomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassroomTableViewCell.m; sourceTree = "<group>"; };
+		AEADB3201ADF436D00C8EF07 /* DatabaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseDelegate.h; sourceTree = "<group>"; };
+		AEADB3211ADF436D00C8EF07 /* DatabaseDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseDelegate.m; sourceTree = "<group>"; };
+		AEADB3231ADF47EE00C8EF07 /* Classrooms.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = Classrooms.sql; sourceTree = "<group>"; };
 		AEBDF4191AC9884D00C0BBDE /* MapProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBDF41D1AC9884D00C0BBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBDF41E1AC9884D00C0BBDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 				AEADB3171ADF33DB00C8EF07 /* Classroom.m */,
 				AEADB3191ADF342500C8EF07 /* ClassroomTableViewCell.h */,
 				AEADB31A1ADF342500C8EF07 /* ClassroomTableViewCell.m */,
+				AEADB3201ADF436D00C8EF07 /* DatabaseDelegate.h */,
+				AEADB3211ADF436D00C8EF07 /* DatabaseDelegate.m */,
 			);
 			name = "Gordons Data";
 			sourceTree = "<group>";
@@ -191,7 +196,7 @@
 		AEADB31C1ADF352500C8EF07 /* Gordons Database */ = {
 			isa = PBXGroup;
 			children = (
-				AEADB3111ADF30E000C8EF07 /* Classrooms.sql */,
+				AEADB3231ADF47EE00C8EF07 /* Classrooms.sql */,
 			);
 			name = "Gordons Database";
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				AEADB2F91ADF173D00C8EF07 /* MapViewController.m in Sources */,
 				AEADB31B1ADF342500C8EF07 /* ClassroomTableViewCell.m in Sources */,
 				AEADB30D1ADF2C2000C8EF07 /* FindClassroomViewController.m in Sources */,
+				AEADB3221ADF436D00C8EF07 /* DatabaseDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@
 
 @synthesize roomNumber, name, latitude, longitude, roomDescription;
 
--(id)initWithData:(NSString *)rn theName:(NSString *)n theLatitude:(double)lat theLongitude:(double)lon theDescription:(NSString *)desc {
+-(id)initWithData:(NSString *)rn theName:(NSString *)n theLatitude:(NSString *)lat theLongitude:(NSString *)lon theDescription:(NSString *)desc {
     
     if (self = [super init]) {
         [self setRoomNumber: rn];
