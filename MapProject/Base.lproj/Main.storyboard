@@ -139,6 +139,43 @@
             </objects>
             <point key="canvasLocation" x="1051" y="-546"/>
         </scene>
+        <!--Sheridan Web View Controller-->
+        <scene sceneID="nFj-tg-loM">
+            <objects>
+                <viewController id="rEJ-lT-0LD" customClass="SheridanWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="niK-Mq-loU"/>
+                        <viewControllerLayoutGuide type="bottom" id="EPq-0P-6eW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QX3-78-NdP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4X-hE-dpB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Sheridan Information" id="QrJ-Zc-PeF">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="f3E-Xu-Ns6"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7P8-Rz-TMn">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqW-fm-zzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1436" y="-541"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="0QD-dA-rcx">
             <objects>
@@ -194,6 +231,7 @@
                                 <items>
                                     <navigationItem title="Find A Classroom" id="3Gv-z6-AMO">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="hfU-4x-iAF"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Info" id="daU-v7-9hy"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
