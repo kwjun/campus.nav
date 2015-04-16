@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ClassroomTableViewCell : UITableViewCell
+@interface ClassroomTableViewCell : UITableViewCell {
+    UILabel *clasrooomNameLabel;
+}
+
+@property (nonatomic, strong) UILabel *clasrooomNameLabel;
 
 @end

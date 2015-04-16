@@ -16,8 +16,10 @@
 		AEADB30D1ADF2C2000C8EF07 /* FindClassroomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB30C1ADF2C2000C8EF07 /* FindClassroomViewController.m */; };
 		AEADB3151ADF333600C8EF07 /* SheridanWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3141ADF333600C8EF07 /* SheridanWebViewController.m */; };
 		AEADB3181ADF33DB00C8EF07 /* Classroom.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3171ADF33DB00C8EF07 /* Classroom.m */; };
-		AEADB31B1ADF342500C8EF07 /* ClassroomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB31A1ADF342500C8EF07 /* ClassroomTableViewCell.m */; };
 		AEADB3221ADF436D00C8EF07 /* DatabaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3211ADF436D00C8EF07 /* DatabaseDelegate.m */; };
+		AEADB3261ADF52FE00C8EF07 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AEADB3241ADF52FE00C8EF07 /* libsqlite3.0.dylib */; };
+		AEADB3271ADF52FF00C8EF07 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AEADB3251ADF52FE00C8EF07 /* libsqlite3.dylib */; };
+		AEADB32D1ADF5E4800C8EF07 /* ClassroomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB32C1ADF5E4800C8EF07 /* ClassroomTableViewCell.m */; };
 		AEBDF41F1AC9884D00C0BBDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF41E1AC9884D00C0BBDE /* main.m */; };
 		AEBDF4221AC9884D00C0BBDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4211AC9884D00C0BBDE /* AppDelegate.m */; };
 		AEBDF4251AC9884D00C0BBDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4241AC9884D00C0BBDE /* ViewController.m */; };
@@ -57,11 +59,13 @@
 		AEADB3141ADF333600C8EF07 /* SheridanWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SheridanWebViewController.m; sourceTree = "<group>"; };
 		AEADB3161ADF33DB00C8EF07 /* Classroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classroom.h; sourceTree = "<group>"; };
 		AEADB3171ADF33DB00C8EF07 /* Classroom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classroom.m; sourceTree = "<group>"; };
-		AEADB3191ADF342500C8EF07 /* ClassroomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassroomTableViewCell.h; sourceTree = "<group>"; };
-		AEADB31A1ADF342500C8EF07 /* ClassroomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassroomTableViewCell.m; sourceTree = "<group>"; };
 		AEADB3201ADF436D00C8EF07 /* DatabaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseDelegate.h; sourceTree = "<group>"; };
 		AEADB3211ADF436D00C8EF07 /* DatabaseDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseDelegate.m; sourceTree = "<group>"; };
 		AEADB3231ADF47EE00C8EF07 /* Classrooms.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = Classrooms.sql; sourceTree = "<group>"; };
+		AEADB3241ADF52FE00C8EF07 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.0.dylib; sourceTree = "<group>"; };
+		AEADB3251ADF52FE00C8EF07 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.dylib; sourceTree = "<group>"; };
+		AEADB32B1ADF5E4800C8EF07 /* ClassroomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassroomTableViewCell.h; sourceTree = "<group>"; };
+		AEADB32C1ADF5E4800C8EF07 /* ClassroomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassroomTableViewCell.m; sourceTree = "<group>"; };
 		AEBDF4191AC9884D00C0BBDE /* MapProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBDF41D1AC9884D00C0BBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBDF41E1AC9884D00C0BBDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEADB3271ADF52FF00C8EF07 /* libsqlite3.dylib in Frameworks */,
+				AEADB3261ADF52FE00C8EF07 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,10 +189,10 @@
 		AEADB3121ADF314F00C8EF07 /* Gordons Data */ = {
 			isa = PBXGroup;
 			children = (
+				AEADB32B1ADF5E4800C8EF07 /* ClassroomTableViewCell.h */,
+				AEADB32C1ADF5E4800C8EF07 /* ClassroomTableViewCell.m */,
 				AEADB3161ADF33DB00C8EF07 /* Classroom.h */,
 				AEADB3171ADF33DB00C8EF07 /* Classroom.m */,
-				AEADB3191ADF342500C8EF07 /* ClassroomTableViewCell.h */,
-				AEADB31A1ADF342500C8EF07 /* ClassroomTableViewCell.m */,
 				AEADB3201ADF436D00C8EF07 /* DatabaseDelegate.h */,
 				AEADB3211ADF436D00C8EF07 /* DatabaseDelegate.m */,
 			);
@@ -222,9 +228,11 @@
 		AEBDF41B1AC9884D00C0BBDE /* MapProject */ = {
 			isa = PBXGroup;
 			children = (
+				AEADB2F61ADF16D700C8EF07 /* Data */,
+				AEADB3241ADF52FE00C8EF07 /* libsqlite3.0.dylib */,
+				AEADB3251ADF52FE00C8EF07 /* libsqlite3.dylib */,
 				AEADB2F41ADF16B700C8EF07 /* Nibs */,
 				AEADB2F51ADF16BE00C8EF07 /* View Controllers */,
-				AEADB2F61ADF16D700C8EF07 /* Data */,
 				AEADB2F31ADF168F00C8EF07 /* Database */,
 				AEBDF4421AC9FCC600C0BBDE /* Images */,
 				AEBDF4291AC9884E00C0BBDE /* Images.xcassets */,
@@ -371,6 +379,7 @@
 				AEADB3031ADF193600C8EF07 /* EditClassroomViewController.m in Sources */,
 				AEADB3001ADF18C000C8EF07 /* AddClassroomViewController.m in Sources */,
 				AEADB2FC1ADF180900C8EF07 /* FavouritesViewController.m in Sources */,
+				AEADB32D1ADF5E4800C8EF07 /* ClassroomTableViewCell.m in Sources */,
 				AEBDF4251AC9884D00C0BBDE /* ViewController.m in Sources */,
 				AEADB3151ADF333600C8EF07 /* SheridanWebViewController.m in Sources */,
 				AEBDF4221AC9884D00C0BBDE /* AppDelegate.m in Sources */,
@@ -379,7 +388,6 @@
 				AEADB3061ADF1D9400C8EF07 /* EditFavouritesViewController.m in Sources */,
 				AEADB3181ADF33DB00C8EF07 /* Classroom.m in Sources */,
 				AEADB2F91ADF173D00C8EF07 /* MapViewController.m in Sources */,
-				AEADB31B1ADF342500C8EF07 /* ClassroomTableViewCell.m in Sources */,
 				AEADB30D1ADF2C2000C8EF07 /* FindClassroomViewController.m in Sources */,
 				AEADB3221ADF436D00C8EF07 /* DatabaseDelegate.m in Sources */,
 			);
@@ -507,6 +515,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MapProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MapProject",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -517,6 +529,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MapProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MapProject",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

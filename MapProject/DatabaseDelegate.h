@@ -16,7 +16,7 @@
     NSMutableArray *classrooms;
 }
 
-//@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) NSString *databaseName;
 @property (strong, nonatomic) NSString *databasePath;
@@ -25,5 +25,7 @@
 -(void)insertIntoDatabase:(Classroom *) classroom;
 -(void)checkAndCreateDatabase;
 -(void)readFromDatabase;
+
+- (NSString *) validateNilString:(NSString *)strValue;
 
 @end

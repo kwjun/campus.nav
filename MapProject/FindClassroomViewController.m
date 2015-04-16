@@ -7,6 +7,8 @@
 //
 
 #import "FindClassroomViewController.h"
+#import "Classroom.h"
+#import "ClassroomTableViewCell.h"
 
 @interface FindClassroomViewController ()
 
@@ -14,9 +16,51 @@
 
 @implementation FindClassroomViewController
 
+@synthesize dbDelegate;
+
+#pragma mark Table Methods
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [dbDelegate.classrooms count];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSString *cellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if(cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    NSInteger row = [indexPath row];
+    
+    Classroom *classroom = [dbDelegate.classrooms objectAtIndex:row];
+    
+//    cell.textLabel = [];
+    
+    
+    return cell;
+    
+}
+
+#pragma mark Application Methods
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    dbDelegate = (DatabaseDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [dbDelegate readFromDatabase];
 }
 
 - (void)didReceiveMemoryWarning {
