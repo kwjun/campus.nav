@@ -10,4 +10,20 @@
 
 @implementation Classroom
 
+@synthesize roomNumber, name, latitude, longitude, roomDescription;
+
+-(id)initWithData:(NSString *)rn theName:(NSString *)n theLatitude:(double)lat theLongitude:(double)lon theDescription:(NSString *)desc {
+    
+    if (self = [super init]) {
+        [self setRoomNumber: rn];
+        [self setName: n];
+        [self setLatitude:lat];
+        [self setLongitude:lon];
+        [self setRoomDescription:desc];
+    }
+    
+    return self;
+    
+}
+
 @end
