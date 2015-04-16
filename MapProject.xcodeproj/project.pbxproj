@@ -15,6 +15,8 @@
 		AEADB3091ADF1DCC00C8EF07 /* AddFavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3081ADF1DCC00C8EF07 /* AddFavouritesViewController.m */; };
 		AEADB30D1ADF2C2000C8EF07 /* FindClassroomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB30C1ADF2C2000C8EF07 /* FindClassroomViewController.m */; };
 		AEADB3151ADF333600C8EF07 /* SheridanWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3141ADF333600C8EF07 /* SheridanWebViewController.m */; };
+		AEADB3181ADF33DB00C8EF07 /* Classroom.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3171ADF33DB00C8EF07 /* Classroom.m */; };
+		AEADB31B1ADF342500C8EF07 /* ClassroomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB31A1ADF342500C8EF07 /* ClassroomTableViewCell.m */; };
 		AEBDF41F1AC9884D00C0BBDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF41E1AC9884D00C0BBDE /* main.m */; };
 		AEBDF4221AC9884D00C0BBDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4211AC9884D00C0BBDE /* AppDelegate.m */; };
 		AEBDF4251AC9884D00C0BBDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4241AC9884D00C0BBDE /* ViewController.m */; };
@@ -53,6 +55,10 @@
 		AEADB3111ADF30E000C8EF07 /* Classrooms.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = Classrooms.sql; sourceTree = "<group>"; };
 		AEADB3131ADF333600C8EF07 /* SheridanWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SheridanWebViewController.h; sourceTree = "<group>"; };
 		AEADB3141ADF333600C8EF07 /* SheridanWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SheridanWebViewController.m; sourceTree = "<group>"; };
+		AEADB3161ADF33DB00C8EF07 /* Classroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classroom.h; sourceTree = "<group>"; };
+		AEADB3171ADF33DB00C8EF07 /* Classroom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classroom.m; sourceTree = "<group>"; };
+		AEADB3191ADF342500C8EF07 /* ClassroomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassroomTableViewCell.h; sourceTree = "<group>"; };
+		AEADB31A1ADF342500C8EF07 /* ClassroomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassroomTableViewCell.m; sourceTree = "<group>"; };
 		AEBDF4191AC9884D00C0BBDE /* MapProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBDF41D1AC9884D00C0BBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBDF41E1AC9884D00C0BBDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,7 +96,7 @@
 		AEADB2F31ADF168F00C8EF07 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				AEADB3111ADF30E000C8EF07 /* Classrooms.sql */,
+				AEADB31C1ADF352500C8EF07 /* Gordons Database */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -174,8 +180,20 @@
 		AEADB3121ADF314F00C8EF07 /* Gordons Data */ = {
 			isa = PBXGroup;
 			children = (
+				AEADB3161ADF33DB00C8EF07 /* Classroom.h */,
+				AEADB3171ADF33DB00C8EF07 /* Classroom.m */,
+				AEADB3191ADF342500C8EF07 /* ClassroomTableViewCell.h */,
+				AEADB31A1ADF342500C8EF07 /* ClassroomTableViewCell.m */,
 			);
 			name = "Gordons Data";
+			sourceTree = "<group>";
+		};
+		AEADB31C1ADF352500C8EF07 /* Gordons Database */ = {
+			isa = PBXGroup;
+			children = (
+				AEADB3111ADF30E000C8EF07 /* Classrooms.sql */,
+			);
+			name = "Gordons Database";
 			sourceTree = "<group>";
 		};
 		AEBDF4101AC9884D00C0BBDE = {
@@ -354,7 +372,9 @@
 				AEBDF41F1AC9884D00C0BBDE /* main.m in Sources */,
 				AEADB3091ADF1DCC00C8EF07 /* AddFavouritesViewController.m in Sources */,
 				AEADB3061ADF1D9400C8EF07 /* EditFavouritesViewController.m in Sources */,
+				AEADB3181ADF33DB00C8EF07 /* Classroom.m in Sources */,
 				AEADB2F91ADF173D00C8EF07 /* MapViewController.m in Sources */,
+				AEADB31B1ADF342500C8EF07 /* ClassroomTableViewCell.m in Sources */,
 				AEADB30D1ADF2C2000C8EF07 /* FindClassroomViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
