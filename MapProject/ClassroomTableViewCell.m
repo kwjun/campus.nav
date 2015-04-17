@@ -10,19 +10,19 @@
 
 @implementation ClassroomTableViewCell
 
-@synthesize clasrooomNameLabel;
+@synthesize classrooomNameLabel;
 
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if (self) {
-        clasrooomNameLabel = [[UILabel alloc]init];
-        clasrooomNameLabel.textAlignment = NSTextAlignmentLeft;
-        clasrooomNameLabel.font = [UIFont systemFontOfSize:18];
-        clasrooomNameLabel.textColor =[UIColor whiteColor];
-        clasrooomNameLabel.backgroundColor = [UIColor clearColor];
+        classrooomNameLabel = [[UILabel alloc]init];
+        classrooomNameLabel.textAlignment = NSTextAlignmentLeft;
+        classrooomNameLabel.font = [UIFont systemFontOfSize:18];
+        classrooomNameLabel.textColor =[UIColor whiteColor];
+        classrooomNameLabel.backgroundColor = [UIColor clearColor];
         
-        [self.contentView addSubview:clasrooomNameLabel];
+        [self.contentView addSubview:classrooomNameLabel];
     }
     return self;
 }
@@ -34,7 +34,7 @@
     
     //Avatar image
     frame = CGRectMake(10, 10, 75, 75);
-    clasrooomNameLabel.frame = frame;
+    classrooomNameLabel.frame = frame;
     
     
 }

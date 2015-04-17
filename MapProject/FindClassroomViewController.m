@@ -22,12 +22,12 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [dbDelegate.classrooms count];
+    return [mainDelegate.classrooms count];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 100;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -35,18 +35,18 @@
     
     NSString *cellIdentifier = @"Cell";
     
-    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    ClassroomTableViewCell *cell = (ClassroomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if(cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[ClassroomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     NSInteger row = [indexPath row];
     
-    Classroom *classroom = [dbDelegate.classrooms objectAtIndex:row];
+    Classroom *classroom = [mainDelegate.classrooms objectAtIndex:row];
     
-    cell.textLabel.text = [classroom name];
+    cell.classrooomNameLabel.text = [classroom name];
     
     
     return cell;

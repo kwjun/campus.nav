@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ClassroomTableViewCell : UITableViewCell {
-    UILabel *clasrooomNameLabel;
+    UILabel *classrooomNameLabel;
 }
 
-@property (nonatomic, strong) UILabel *clasrooomNameLabel;
+@property (nonatomic, strong) UILabel *classrooomNameLabel;
 
 @end
