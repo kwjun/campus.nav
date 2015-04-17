@@ -19,8 +19,8 @@
         classrooomNameLabel = [[UILabel alloc]init];
         classrooomNameLabel.textAlignment = NSTextAlignmentLeft;
         classrooomNameLabel.font = [UIFont systemFontOfSize:18];
-        classrooomNameLabel.textColor =[UIColor whiteColor];
-        classrooomNameLabel.backgroundColor = [UIColor clearColor];
+        classrooomNameLabel.textColor =[UIColor blackColor];
+        classrooomNameLabel.backgroundColor = [UIColor redColor];
         
         [self.contentView addSubview:classrooomNameLabel];
     }

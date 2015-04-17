@@ -59,6 +59,8 @@
     [super viewDidLoad];
     
     mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [mainDelegate readFromDatabase];
 }
 
 - (void)didReceiveMemoryWarning {

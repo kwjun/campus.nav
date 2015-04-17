@@ -183,11 +183,10 @@
   
     [self checkAndCreateDatabase];
     [self readFromDatabase];
-
     
-    Classroom *classroom = [[Classroom alloc] initWithData:@"E201" theName:@"Cool Room" theLatitude:@"129.12312" theLongitude:@"123.321213" theDescription:@"This is a room"];
+    //Classroom *classroom = [[Classroom alloc] initWithData:@"E201" theName:@"Cool Room" theLatitude:@"129.12312" theLongitude:@"123.321213" theDescription:@"This is a room"];
     
-    [self.classrooms addObject:classroom];
+    //[self.classrooms addObject:classroom];
     
     return YES;
 }

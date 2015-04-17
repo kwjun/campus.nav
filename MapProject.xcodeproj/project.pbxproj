@@ -16,9 +16,9 @@
 		AEADB30D1ADF2C2000C8EF07 /* FindClassroomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB30C1ADF2C2000C8EF07 /* FindClassroomViewController.m */; };
 		AEADB3151ADF333600C8EF07 /* SheridanWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3141ADF333600C8EF07 /* SheridanWebViewController.m */; };
 		AEADB3181ADF33DB00C8EF07 /* Classroom.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3171ADF33DB00C8EF07 /* Classroom.m */; };
-		AEADB3261ADF52FE00C8EF07 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AEADB3241ADF52FE00C8EF07 /* libsqlite3.0.dylib */; };
 		AEADB3271ADF52FF00C8EF07 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AEADB3251ADF52FE00C8EF07 /* libsqlite3.dylib */; };
 		AEADB32D1ADF5E4800C8EF07 /* ClassroomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB32C1ADF5E4800C8EF07 /* ClassroomTableViewCell.m */; };
+		AEADB3361AE0947F00C8EF07 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AEADB3351AE0947F00C8EF07 /* libsqlite3.0.dylib */; };
 		AEBDF41F1AC9884D00C0BBDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF41E1AC9884D00C0BBDE /* main.m */; };
 		AEBDF4221AC9884D00C0BBDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4211AC9884D00C0BBDE /* AppDelegate.m */; };
 		AEBDF4251AC9884D00C0BBDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4241AC9884D00C0BBDE /* ViewController.m */; };
@@ -58,11 +58,11 @@
 		AEADB3141ADF333600C8EF07 /* SheridanWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SheridanWebViewController.m; sourceTree = "<group>"; };
 		AEADB3161ADF33DB00C8EF07 /* Classroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classroom.h; sourceTree = "<group>"; };
 		AEADB3171ADF33DB00C8EF07 /* Classroom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classroom.m; sourceTree = "<group>"; };
-		AEADB3241ADF52FE00C8EF07 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.0.dylib; sourceTree = "<group>"; };
-		AEADB3251ADF52FE00C8EF07 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.dylib; sourceTree = "<group>"; };
+		AEADB3251ADF52FE00C8EF07 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = MapProject/libsqlite3.dylib; sourceTree = "<group>"; };
 		AEADB32B1ADF5E4800C8EF07 /* ClassroomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassroomTableViewCell.h; sourceTree = "<group>"; };
 		AEADB32C1ADF5E4800C8EF07 /* ClassroomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassroomTableViewCell.m; sourceTree = "<group>"; };
 		AEADB3341AE08DB400C8EF07 /* Classrooms.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = Classrooms.sql; sourceTree = "<group>"; };
+		AEADB3351AE0947F00C8EF07 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		AEBDF4191AC9884D00C0BBDE /* MapProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBDF41D1AC9884D00C0BBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBDF41E1AC9884D00C0BBDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEADB3361AE0947F00C8EF07 /* libsqlite3.0.dylib in Frameworks */,
 				AEADB3271ADF52FF00C8EF07 /* libsqlite3.dylib in Frameworks */,
-				AEADB3261ADF52FE00C8EF07 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +205,8 @@
 		AEBDF4101AC9884D00C0BBDE = {
 			isa = PBXGroup;
 			children = (
+				AEADB3351AE0947F00C8EF07 /* libsqlite3.0.dylib */,
+				AEADB3251ADF52FE00C8EF07 /* libsqlite3.dylib */,
 				AEBDF41B1AC9884D00C0BBDE /* MapProject */,
 				AEBDF4351AC9884E00C0BBDE /* MapProjectTests */,
 				AEBDF41A1AC9884D00C0BBDE /* Products */,
@@ -224,8 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				AEADB2F61ADF16D700C8EF07 /* Data */,
-				AEADB3241ADF52FE00C8EF07 /* libsqlite3.0.dylib */,
-				AEADB3251ADF52FE00C8EF07 /* libsqlite3.dylib */,
 				AEADB2F41ADF16B700C8EF07 /* Nibs */,
 				AEADB2F51ADF16BE00C8EF07 /* View Controllers */,
 				AEADB2F31ADF168F00C8EF07 /* Database */,
