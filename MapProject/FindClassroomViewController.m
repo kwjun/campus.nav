@@ -16,7 +16,7 @@
 
 @implementation FindClassroomViewController
 
-@synthesize dbDelegate;
+@synthesize mainDelegate;
 
 #pragma mark Table Methods
 
@@ -46,7 +46,7 @@
     
     Classroom *classroom = [dbDelegate.classrooms objectAtIndex:row];
     
-//    cell.textLabel = [];
+    cell.textLabel.text = [classroom name];
     
     
     return cell;
@@ -58,9 +58,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    dbDelegate = (DatabaseDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    [dbDelegate readFromDatabase];
+    mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
 - (void)didReceiveMemoryWarning {

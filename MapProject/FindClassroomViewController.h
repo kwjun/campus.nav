@@ -14,12 +14,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
-#import "DatabaseDelegate.h"
+#import "AppDelegate.h"
 
 @interface FindClassroomViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
-    DatabaseDelegate *dbDelegate;
+    AppDelegate *dbDelegate;
 }
 
-@property (nonatomic, strong) DatabaseDelegate *dbDelegate;
+@property (nonatomic, strong) AppDelegate *mainDelegate;
 
 @end
