@@ -85,6 +85,8 @@
                     roomNumber = @"nil";
                 }
                 
+                NSLog(roomNumber);
+                
                 @try {
                     name = [self validateNilString:[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)]];
                 } @catch(NSException *ex) {
@@ -92,12 +94,16 @@
                     name = @"nil";
                 }
                 
+                NSLog(name);
+                
                 @try {
                     latitude = [self validateNilString:[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)]];
                 } @catch(NSException *ex) {
                     NSLog(@"In name, Exption: %@", ex);
-                    name = @"nil";
+                    latitude = @"nil";
                 }
+                
+                NSLog(latitude);
                 
                 @try {
                     longitude = [self validateNilString:[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)]];
@@ -106,12 +112,16 @@
                     longitude = @"nil";
                 }
                 
+                NSLog(longitude);
+                
                 @try {
                     roomDescription = [self validateNilString:[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)]];
                 } @catch(NSException *ex) {
                     NSLog(@"In name, Exption: %@", ex);
                     roomDescription = @"nil";
                 }
+                
+                NSLog(roomDescription);
                 
                 Classroom *classroom = [[Classroom alloc] initWithData:roomNumber theName:name theLatitude:latitude theLongitude:longitude theDescription:roomDescription];
                 
@@ -178,9 +188,6 @@
     Classroom *classroom = [[Classroom alloc] initWithData:@"E201" theName:@"Cool Room" theLatitude:@"129.12312" theLongitude:@"123.321213" theDescription:@"This is a room"];
     
     [self.classrooms addObject:classroom];
-    
-    
-    NSLog([NSString stringWithFormat:@"NUmber of items in classroom: %lu", [self.classrooms count]]);
     
     return YES;
 }

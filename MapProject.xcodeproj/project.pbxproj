@@ -58,11 +58,11 @@
 		AEADB3141ADF333600C8EF07 /* SheridanWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SheridanWebViewController.m; sourceTree = "<group>"; };
 		AEADB3161ADF33DB00C8EF07 /* Classroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classroom.h; sourceTree = "<group>"; };
 		AEADB3171ADF33DB00C8EF07 /* Classroom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classroom.m; sourceTree = "<group>"; };
-		AEADB3231ADF47EE00C8EF07 /* Classrooms.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = Classrooms.sql; sourceTree = "<group>"; };
 		AEADB3241ADF52FE00C8EF07 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.0.dylib; sourceTree = "<group>"; };
 		AEADB3251ADF52FE00C8EF07 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.dylib; sourceTree = "<group>"; };
 		AEADB32B1ADF5E4800C8EF07 /* ClassroomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassroomTableViewCell.h; sourceTree = "<group>"; };
 		AEADB32C1ADF5E4800C8EF07 /* ClassroomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassroomTableViewCell.m; sourceTree = "<group>"; };
+		AEADB3341AE08DB400C8EF07 /* Classrooms.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = Classrooms.sql; sourceTree = "<group>"; };
 		AEBDF4191AC9884D00C0BBDE /* MapProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBDF41D1AC9884D00C0BBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBDF41E1AC9884D00C0BBDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 		AEADB31C1ADF352500C8EF07 /* Gordons Database */ = {
 			isa = PBXGroup;
 			children = (
-				AEADB3231ADF47EE00C8EF07 /* Classrooms.sql */,
+				AEADB3341AE08DB400C8EF07 /* Classrooms.sql */,
 			);
 			name = "Gordons Database";
 			sourceTree = "<group>";
