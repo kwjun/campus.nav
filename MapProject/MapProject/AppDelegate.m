@@ -35,6 +35,10 @@
 -(void)insertIntoDatabase:(Classroom *)classroom {
     sqlite3 *database;
     
+    Classroom *room = [[Classroom alloc] initWithData:@"E201" theName:@"Cool Room" theLatitude:@"129.12312" theLongitude:@"123.321213" theDescription:@"This is a room"];
+    
+    [self.classrooms addObject:room];
+    
     if (sqlite3_open([self.databasePath UTF8String], &database) == SQLITE_OK) {
         
         const char *sqlStatement = "INSERT INTO Classrooms VALUES(?, ?, ?, ?, ?)";
@@ -42,11 +46,12 @@
         
         if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
             
-            sqlite3_bind_text(compiledStatement, 1, [classroom.roomNumber UTF8String], -1, SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 2, [classroom.name UTF8String], -1, SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 3, [classroom.latitude UTF8String], -1, SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 4, [classroom.longitude UTF8String], -1, SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 5, [classroom.roomDescription UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 1, [room.roomNumber UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 2, [room.name UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 3, [room.latitude UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 4, [room.longitude UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 5, [room.roomDescription UTF8String], -1, SQLITE_TRANSIENT);
+            
         }
         if (sqlite3_step(compiledStatement) != SQLITE_DONE) {
             NSLog(@"Error: %s", sqlite3_errmsg(database));
@@ -73,10 +78,18 @@
         
         sqlite3_stmt *compiledStatement;
         
+        Boolean check = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK;
+        
+        NSLog([NSString stringWithFormat:@"Check: %d", check]);
+        
         if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+            
+        NSLog(@"In if(sqlite3_prepare) ");
             
             // Loop through the results and add them to the feeds array
             while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+                
+            NSLog(@"In while_loop(checking for existing rows)");
                 
                 // Read the data from the result row
                 NSString *roomNumber;
@@ -104,7 +117,7 @@
                 NSLog(name);
                 
                 @try {
-                    latitude = [self validateNilString:[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)]];
+                    latitude = [self validateNilString:[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)]];
                 } @catch(NSException *ex) {
                     NSLog(@"In name, Exption: %@", ex);
                     latitude = @"nil";
@@ -113,7 +126,7 @@
                 NSLog(latitude);
                 
                 @try {
-                    longitude = [self validateNilString:[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)]];
+                    longitude = [self validateNilString:[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)]];
                 } @catch(NSException *ex) {
                     NSLog(@"In name, Exption: %@", ex);
                     longitude = @"nil";
@@ -122,7 +135,7 @@
                 NSLog(longitude);
                 
                 @try {
-                    roomDescription = [self validateNilString:[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)]];
+                    roomDescription = [self validateNilString:[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)]];
                 } @catch(NSException *ex) {
                     NSLog(@"In name, Exption: %@", ex);
                     roomDescription = @"nil";
@@ -135,14 +148,14 @@
                 [self.classrooms addObject:classroom];
                 
             }
-            
+            NSLog(@"After while loop");
         }
-        
+        NSLog(@"After sqlite3_prepareStatement if statement");
         // Release the compiled statement from memory
         sqlite3_finalize(compiledStatement);
         
     }
-    
+    NSLog(@"After sqlite3_open if statement");
     sqlite3_close(database);
     
 }
@@ -192,7 +205,8 @@
     self.databasePath = [documentsDir stringByAppendingPathComponent:self.databaseName];
   
     [self checkAndCreateDatabase];
-    [self readFromDatabase];
+    [self insertIntoDatabase: nil];
+    //[self readFromDatabase];
     
     //Classroom *classroom = [[Classroom alloc] initWithData:@"E201" theName:@"Cool Room" theLatitude:@"129.12312" theLongitude:@"123.321213" theDescription:@"This is a room"];
     

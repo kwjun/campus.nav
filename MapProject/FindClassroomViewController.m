@@ -27,7 +27,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    return 50;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -46,8 +46,11 @@
     
     Classroom *classroom = [mainDelegate.classrooms objectAtIndex:row];
     
+    cell.roomNumberLabel.text = [classroom roomNumber];
     cell.classrooomNameLabel.text = [classroom name];
-    
+    cell.latitudeLabel.text = [classroom latitude];
+    cell.longitudeLabel.text = [classroom longitude];
+    cell.roomDescriptionLabel.text = [classroom roomDescription];
     
     return cell;
     
@@ -59,8 +62,6 @@
     [super viewDidLoad];
     
     mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    [mainDelegate readFromDatabase];
 }
 
 - (void)didReceiveMemoryWarning {
