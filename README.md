@@ -27,7 +27,7 @@ Data structures (See below)
 
 NSArray, NSDictionary
   - I (gordon) will use an NSArray, populated from the DB when the program loads
-  - NSDictionary, not sure so far
+  - NSDictionary : Internationalization (Jun)
 
 Properties and Synthezize
   -we will all use this stuff
