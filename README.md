@@ -57,7 +57,7 @@ Each memeber must use a web view and a table view
 Each memeber must incorporate 1 tech not covered in class
   - Peter, the map kit
   - Gordon, I'm thinking of using sounds, or possibly a link to facebook / twitter, but will probably end up with sounds
-  - Jun, ?
+  - Jun, Localization 
   - Alex, ?
   - 
 
@@ -72,7 +72,7 @@ Peter (so far)
   - EditFavouritesClassroom / supporting files
   
 Jun
-  - ?
+  - Settings ViewController
   - 
   
 Alex
