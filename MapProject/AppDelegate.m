@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FavRooms.h"
 
 @interface AppDelegate ()
 
@@ -14,11 +15,16 @@
 
 @implementation AppDelegate
 
-@synthesize databaseName, databasePath, classrooms;
+@synthesize databaseName, databasePath, classrooms, favRoom;
 
 #pragma mark Database Implementation
 
 -(void)checkAndCreateDatabase {
+    databaseName = @"Classrooms.sql";
+    NSArray *documentsPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDir = [documentsPaths objectAtIndex:0];
+    databasePath = [documentsDir stringByAppendingPathComponent:databaseName];
+    NSLog(@"Database path: %@", databasePath);
     BOOL success;
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -29,7 +35,28 @@
     
     NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: databaseName];
     
-    [fileManager copyItemAtPath:databasePathFromApp toPath: databasePath error:nil];
+    [fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
+    
+    sqlite3 *database;
+    sqlite3_stmt *statement;
+    if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
+    {
+        NSString *create = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS favourites ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'room' TEXT, 'latitude' TEXT, 'longitude' TEXT);"];
+        const char *create_stmt = [create UTF8String];
+        sqlite3_prepare_v2(database, create_stmt, -1, &statement, NULL);
+        
+        if(sqlite3_step(statement)==SQLITE_DONE)
+        {
+            NSLog(@"favourite table created");
+        }
+        else
+        {
+            NSLog(@"favourite table could not be created");
+        }
+        sqlite3_finalize(statement);
+        sqlite3_close(database);
+    }
+    
 }
 
 -(void)insertIntoDatabase:(Classroom *)classroom {
@@ -68,7 +95,7 @@
     if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
         NSLog(@"IN if(sqlite3_open) ");
         
-        // Setup the SQL Statement and compile it for faster access        
+        // Setup the SQL Statement and compile it for faster access
         const char *sqlStatement = "SELECT * FROM Classrooms";
         
         sqlite3_stmt *compiledStatement;
@@ -185,14 +212,19 @@
     
     // Override point for customization after application launch.
     self.classrooms = [[NSMutableArray alloc] init];
+    self.favRoom = [[NSMutableArray alloc] init];
     self.databaseName = @"Classrooms.sql";
     
-    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDir = [documentPaths objectAtIndex:0];
-    self.databasePath = [documentsDir stringByAppendingPathComponent:self.databaseName];
-  
+    
+    //NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    //NSString *documentsDir = [documentPaths objectAtIndex:0];
+    //self.databasePath = [documentsDir stringByAppendingPathComponent:self.databaseName];
+    
     [self checkAndCreateDatabase];
+    [self readFavDataFromDatabase];
     [self readFromDatabase];
+    
+    
     
     //Classroom *classroom = [[Classroom alloc] initWithData:@"E201" theName:@"Cool Room" theLatitude:@"129.12312" theLongitude:@"123.321213" theDescription:@"This is a room"];
     
@@ -222,5 +254,82 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark Peters DB methods
+
+-(void)insertIntoFavDatabase:(FavRooms *)fRoom
+{
+    // Setup the database object
+    sqlite3 *database;
+    
+    
+    // Open the database from the users filessytem
+    if(sqlite3_open([self.databasePath UTF8String], &database) == SQLITE_OK)
+    {
+        const char *sqlStatement = "INSERT INTO favourites VALUES(NULL, ?, ?, ?)";
+        sqlite3_stmt *compiledStatement;
+        
+        if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK)
+        {
+            sqlite3_bind_text(compiledStatement, 1, [fRoom.room UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 2, [fRoom.latitude UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 3, [fRoom.longitude UTF8String], -1, SQLITE_TRANSIENT);
+        }
+        if(sqlite3_step(compiledStatement) == SQLITE_DONE)
+        {
+            NSLog(@"Insert into row id = %lld", sqlite3_last_insert_rowid(database));
+            sqlite3_reset(compiledStatement);
+            
+        }
+        else
+        {
+            NSLog(@"Error: %s", sqlite3_errmsg(database));
+        }
+        sqlite3_finalize(compiledStatement);
+    }
+    sqlite3_close(database);
+}
+
+-(void) readFavDataFromDatabase {
+    
+    // clear array
+    [self.favRoom removeAllObjects];
+    // Setup the database object
+    sqlite3 *database;
+    
+    // Open the database from the users filessytem
+    if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+        NSLog(@"In fav db open");
+        const char *select = "SELECT * FROM favourites";
+        sqlite3_stmt *compiledStatement;
+        
+        if(sqlite3_prepare_v2(database, select, -1, &compiledStatement, NULL) == SQLITE_OK) {
+            NSLog(@"In prepare v2");
+            // Loop through the results and add them to array
+            while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+                // Read the data from the result row
+                NSString *room = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                NSString *lat = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+                NSString *lon = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
+                
+                FavRooms *data = [[FavRooms alloc] initWithData:room roomLat:lat roomLong:lon];
+                [self.favRoom addObject:data];
+                
+                NSLog(@"%@, %@, %@", [[favRoom objectAtIndex:0]room], [[favRoom objectAtIndex:0]latitude], [[favRoom objectAtIndex:0]longitude]);
+            }
+        }
+        else
+        {
+            //NSLog(@"Unable to read from database");
+            NSLog(@"Error: %s", sqlite3_errmsg(database));
+            
+        }
+        // Release the compiled statement from memory
+        sqlite3_finalize(compiledStatement);
+        
+    }
+    sqlite3_close(database);
+}
+
 
 @end

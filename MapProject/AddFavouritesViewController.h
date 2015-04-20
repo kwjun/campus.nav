@@ -7,7 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface AddFavouritesViewController : ViewController
+{
+    AppDelegate *mainDelegate;
+    
+}
 
+@property(strong, nonatomic)AppDelegate *mainDelegate;
 @end

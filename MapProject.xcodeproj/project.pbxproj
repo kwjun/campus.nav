@@ -27,6 +27,10 @@
 		AEBDF42D1AC9884E00C0BBDE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBDF42B1AC9884E00C0BBDE /* LaunchScreen.xib */; };
 		AEBDF4391AC9884E00C0BBDE /* MapProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4381AC9884E00C0BBDE /* MapProjectTests.m */; };
 		AEBDF4441AC9FCDC00C0BBDE /* 1427768975_0007_Location.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBDF4431AC9FCDC00C0BBDE /* 1427768975_0007_Location.png */; };
+		AED101651AE5779F00B88C56 /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AED101621AE5779F00B88C56 /* MapViewAnnotation.m */; };
+		AED101661AE5779F00B88C56 /* FavRooms.m in Sources */ = {isa = PBXBuildFile; fileRef = AED101641AE5779F00B88C56 /* FavRooms.m */; };
+		AED101691AE57A0200B88C56 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED101681AE57A0200B88C56 /* MapKit.framework */; };
+		AED1016B1AE57A0800B88C56 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED1016A1AE57A0800B88C56 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,12 @@
 		AEBDF4371AC9884E00C0BBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBDF4381AC9884E00C0BBDE /* MapProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapProjectTests.m; sourceTree = "<group>"; };
 		AEBDF4431AC9FCDC00C0BBDE /* 1427768975_0007_Location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1427768975_0007_Location.png; sourceTree = "<group>"; };
+		AED101611AE5779F00B88C56 /* MapViewAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewAnnotation.h; sourceTree = "<group>"; };
+		AED101621AE5779F00B88C56 /* MapViewAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewAnnotation.m; sourceTree = "<group>"; };
+		AED101631AE5779F00B88C56 /* FavRooms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavRooms.h; sourceTree = "<group>"; };
+		AED101641AE5779F00B88C56 /* FavRooms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavRooms.m; sourceTree = "<group>"; };
+		AED101681AE57A0200B88C56 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AED1016A1AE57A0800B88C56 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED1016B1AE57A0800B88C56 /* CoreLocation.framework in Frameworks */,
+				AED101691AE57A0200B88C56 /* MapKit.framework in Frameworks */,
 				AEADB3361AE0947F00C8EF07 /* libsqlite3.0.dylib in Frameworks */,
 				AEADB3271ADF52FF00C8EF07 /* libsqlite3.dylib in Frameworks */,
 			);
@@ -155,6 +167,7 @@
 		AEADB30E1ADF2C3600C8EF07 /* Peters View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AED101671AE577A500B88C56 /* Data Structures */,
 				AEADB3041ADF1D9400C8EF07 /* EditFavouritesViewController.h */,
 				AEADB3051ADF1D9400C8EF07 /* EditFavouritesViewController.m */,
 				AEADB3071ADF1DCC00C8EF07 /* AddFavouritesViewController.h */,
@@ -205,6 +218,8 @@
 		AEBDF4101AC9884D00C0BBDE = {
 			isa = PBXGroup;
 			children = (
+				AED1016A1AE57A0800B88C56 /* CoreLocation.framework */,
+				AED101681AE57A0200B88C56 /* MapKit.framework */,
 				AEADB3351AE0947F00C8EF07 /* libsqlite3.0.dylib */,
 				AEADB3251ADF52FE00C8EF07 /* libsqlite3.dylib */,
 				AEBDF41B1AC9884D00C0BBDE /* MapProject */,
@@ -268,6 +283,17 @@
 				AEBDF4431AC9FCDC00C0BBDE /* 1427768975_0007_Location.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		AED101671AE577A500B88C56 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				AED101611AE5779F00B88C56 /* MapViewAnnotation.h */,
+				AED101621AE5779F00B88C56 /* MapViewAnnotation.m */,
+				AED101631AE5779F00B88C56 /* FavRooms.h */,
+				AED101641AE5779F00B88C56 /* FavRooms.m */,
+			);
+			name = "Data Structures";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,12 +403,14 @@
 				AEADB32D1ADF5E4800C8EF07 /* ClassroomTableViewCell.m in Sources */,
 				AEBDF4251AC9884D00C0BBDE /* ViewController.m in Sources */,
 				AEADB3151ADF333600C8EF07 /* SheridanWebViewController.m in Sources */,
+				AED101661AE5779F00B88C56 /* FavRooms.m in Sources */,
 				AEBDF4221AC9884D00C0BBDE /* AppDelegate.m in Sources */,
 				AEBDF41F1AC9884D00C0BBDE /* main.m in Sources */,
 				AEADB3091ADF1DCC00C8EF07 /* AddFavouritesViewController.m in Sources */,
 				AEADB3061ADF1D9400C8EF07 /* EditFavouritesViewController.m in Sources */,
 				AEADB3181ADF33DB00C8EF07 /* Classroom.m in Sources */,
 				AEADB2F91ADF173D00C8EF07 /* MapViewController.m in Sources */,
+				AED101651AE5779F00B88C56 /* MapViewAnnotation.m in Sources */,
 				AEADB30D1ADF2C2000C8EF07 /* FindClassroomViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
