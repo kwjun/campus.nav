@@ -59,7 +59,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="JtB-c1-OG4"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="crossDissolve" id="JtB-c1-OG4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -99,7 +99,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Map" id="MyH-fP-0f2" colorLabel="IBBuiltInLabel-Orange">
-                                        <barButtonItem key="leftBarButtonItem" title="Home" id="NAc-ZR-DrN"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="NAc-ZR-DrN">
+                                            <connections>
+                                                <segue destination="fNM-3e-43N" kind="unwind" unwindAction="unwindToThisViewController:" id="pfj-bq-nQW"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Settings" id="dxC-bP-qtd"/>
                                     </navigationItem>
                                 </items>
@@ -140,6 +144,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="fNM-3e-43N" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="669" y="781"/>
         </scene>
@@ -495,8 +500,16 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Favorites" id="QW5-N8-JwQ">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="nRP-PA-Xgl"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Add " id="2wn-Bu-RaJ"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="nRP-PA-Xgl">
+                                            <connections>
+                                                <segue destination="p7D-Y0-3YF" kind="unwind" unwindAction="unwindToThisViewController:" id="WSu-nC-bqU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Add " id="2wn-Bu-RaJ">
+                                            <connections>
+                                                <segue destination="Ay6-eV-jyA" kind="presentation" modalTransitionStyle="crossDissolve" id="6cf-rS-lIt"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -521,6 +534,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BI-QM-IdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="p7D-Y0-3YF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="669" y="1445"/>
         </scene>
@@ -544,7 +558,12 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Add Favourite" id="a9n-vB-oOF">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="kOY-QV-hZT"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="kOY-QV-hZT">
+                                            <connections>
+                                                <action selector="unwindToThisViewController:" destination="Ay6-eV-jyA" id="qhS-fF-cSp"/>
+                                                <segue destination="rwK-GI-LRb" kind="unwind" unwindAction="unwindToThisViewController:" id="UW5-Yw-v6q"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -587,13 +606,22 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPerson:" destination="Ay6-eV-jyA" eventType="touchUpInside" id="QHL-hu-Xfj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tfLat" destination="LZg-Zl-iT4" id="Aaj-ef-6Gy"/>
+                        <outlet property="tfLon" destination="es4-bs-Kx1" id="2QM-yp-twf"/>
+                        <outlet property="tfRoom" destination="ZBb-1G-GQN" id="nNX-L5-ByU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1V-Xe-psP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="rwK-GI-LRb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="283" y="1445"/>
         </scene>

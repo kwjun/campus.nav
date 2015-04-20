@@ -12,7 +12,7 @@
 
 @implementation FavouritesViewController
 
-@synthesize mainDelegate;
+@synthesize mainDelegate, selectedIndex, tableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -74,10 +74,35 @@
     return cell;
 }
 
-- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath
+- (void) tableView: (UITableView *) tableView2 didSelectRowAtIndexPath: (NSIndexPath *) indexPath
 {
-    //segue to EditViewController and prepopulate text fields
-    [self performSegueWithIdentifier:@"TableSegueToEdit" sender:self];
+    UIAlertView *alert = [[UIAlertView  alloc]
+                          initWithTitle:@"Delete Record"
+                          message:@"Are you sure you want to delete this record?"
+                          delegate:self
+                          cancelButtonTitle:@"Cancel"
+                          otherButtonTitles:@"Delete", nil];
+    
+    alert.tag = 1;
+    [alert show];
+    selectedIndex = [tableView2 indexPathForSelectedRow];
 }
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+    FavRooms *room = [mainDelegate.favRoom objectAtIndex:selectedIndex.row];
+    if(buttonIndex == [alertView cancelButtonIndex])
+    {
+        NSLog(@"%@", room.room);
+    }
+    else
+    {
+        [mainDelegate deleteFromDb:room];
+        
+        
+    }
+}
+
 
 @end

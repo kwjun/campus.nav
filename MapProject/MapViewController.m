@@ -34,12 +34,21 @@
     region.span.latitudeDelta = 0.01f;
     region.span.longitudeDelta = 0.01f;
     [mapView setRegion:region animated:YES];
-    [mapView setDelegate:self];
     
     self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.delegate = self;
     [self.mapView addAnnotations:[self createAnnotations]];
     
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [mainDelegate readFavDataFromDatabase];
+    NSMutableArray *annotations = [NSMutableArray array];
+    for (id annotation in [mapView annotations])
+    {
+        [annotations addObject:annotation];
+    }
+    [self.mapView removeAnnotations:annotations];
+    [self.mapView addAnnotations:[self createAnnotations]];
 }
 
 - (void)didReceiveMemoryWarning {

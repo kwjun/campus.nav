@@ -33,6 +33,7 @@
 -(void)readFromDatabase;
 -(void)insertIntoFavDatabase:(FavRooms *)fRoom;
 -(void)readFavDataFromDatabase;
+-(void)deleteFromDb:(FavRooms *)fRoom;
 
 
 
