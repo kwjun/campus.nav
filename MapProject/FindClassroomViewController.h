@@ -22,4 +22,6 @@
 
 @property (nonatomic, strong) AppDelegate *mainDelegate;
 
+-(IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue;
+
 @end

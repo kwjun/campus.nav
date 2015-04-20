@@ -21,17 +21,20 @@
 
 -(void)checkAndCreateDatabase {
     databaseName = @"Classrooms.sql";
+    
     NSArray *documentsPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
     NSString *documentsDir = [documentsPaths objectAtIndex:0];
+    
     databasePath = [documentsDir stringByAppendingPathComponent:databaseName];
-    NSLog(@"Database path: %@", databasePath);
+
     BOOL success;
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
     success = [fileManager fileExistsAtPath:databasePath];
     
-    if (success) return;
+    //if (success) return;
     
     NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: databaseName];
     
@@ -57,6 +60,24 @@
         sqlite3_close(database);
     }
     
+    if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
+    {
+        NSString *create = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS Classrooms (RoomNumber TEXT, RoomName TEXT, latitude TEXT, longitude TEXT, RoomDescription TEXT)"];
+        const char *create_stmt = [create UTF8String];
+        sqlite3_prepare_v2(database, create_stmt, -1, &statement, NULL);
+        
+        if(sqlite3_step(statement)==SQLITE_DONE)
+        {
+            NSLog(@"Classroom table created");
+        }
+        else
+        {
+            NSLog(@"Classroom table could not be created");
+        }
+        sqlite3_finalize(statement);
+        sqlite3_close(database);
+    }
+
 }
 
 -(void)insertIntoDatabase:(Classroom *)classroom {
@@ -215,20 +236,9 @@
     self.favRoom = [[NSMutableArray alloc] init];
     self.databaseName = @"Classrooms.sql";
     
-    
-    //NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    //NSString *documentsDir = [documentPaths objectAtIndex:0];
-    //self.databasePath = [documentsDir stringByAppendingPathComponent:self.databaseName];
-    
     [self checkAndCreateDatabase];
     [self readFavDataFromDatabase];
     [self readFromDatabase];
-    
-    
-    
-    //Classroom *classroom = [[Classroom alloc] initWithData:@"E201" theName:@"Cool Room" theLatitude:@"129.12312" theLongitude:@"123.321213" theDescription:@"This is a room"];
-    
-    //[self.classrooms addObject:classroom];
     
     return YES;
 }

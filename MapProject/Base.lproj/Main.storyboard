@@ -32,7 +32,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="V44-11-OfD" kind="presentation" id="QD0-mi-PJH"/>
+                                    <segue destination="V44-11-OfD" kind="presentation" id="SKe-LO-HLO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yqo-Qe-bU3">
@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXb-dP-dhd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="82"/>
+            <point key="canvasLocation" x="602" y="62"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -163,21 +163,36 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Sheridan Information" id="QrJ-Zc-PeF">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="f3E-Xu-Ns6"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="f3E-Xu-Ns6">
+                                            <connections>
+                                                <segue destination="AzE-wV-p9a" kind="unwind" unwindAction="unwindToThisViewController:" id="CoW-d3-Yop"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7P8-Rz-TMn">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rEJ-lT-0LD" id="6hk-6P-wYT"/>
+                                </connections>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pj0-OU-VVj">
+                                <rect key="frame" x="150" y="296" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" image="info.png" id="VBz-tR-1jp"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="activity" destination="pj0-OU-VVj" id="xSW-WU-Ttc"/>
+                        <outlet property="sheridanPage" destination="7P8-Rz-TMn" id="hyH-al-g7b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqW-fm-zzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="AzE-wV-p9a" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1346" y="-639"/>
         </scene>
@@ -239,8 +254,16 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Add Classroom" id="w3b-UU-DFS" propertyAccessControl="none">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="mkG-I8-uV7"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Add" id="AcO-ur-hqq"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="mkG-I8-uV7">
+                                            <connections>
+                                                <segue destination="1KW-mI-vma" kind="unwind" unwindAction="unwindToThisViewController:" id="6oW-dJ-NcK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Add" id="7T5-7R-9WP">
+                                            <connections>
+                                                <action selector="addRoomToDatabase:" destination="9aG-SP-zGq" id="EmN-SH-5ne"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -275,48 +298,63 @@
                                 <rect key="frame" x="138" y="56" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9aG-SP-zGq" id="8qN-A6-vkb"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kam-r3-H7c">
                                 <rect key="frame" x="138" y="94" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gei-9f-gOf">
-                                <rect key="frame" x="138" y="132" width="150" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9aG-SP-zGq" id="JXC-hb-GII"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3i-VT-21Z">
                                 <rect key="frame" x="138" y="170" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9aG-SP-zGq" id="290-mT-Hgd"/>
+                                </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter a description here" translatesAutoresizingMaskIntoConstraints="NO" id="bBw-Db-Lxr">
-                                <rect key="frame" x="18" y="283" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwr-yi-nOB">
-                                <rect key="frame" x="138" y="216" width="120" height="30"/>
-                                <color key="backgroundColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Get Location">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcY-eT-Rth">
                                 <rect key="frame" x="12" y="254" width="118" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xi7-Et-cxI">
+                                <rect key="frame" x="33" y="283" width="255" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9aG-SP-zGq" id="GmR-3K-8TO"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gei-9f-gOf">
+                                <rect key="frame" x="138" y="132" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9aG-SP-zGq" id="AIr-u0-c6b"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Room" image="addNew.png" id="0bF-pH-jqz"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="descriptionTF" destination="Xi7-Et-cxI" id="e8P-Gt-hzl"/>
+                        <outlet property="latitudeTF" destination="X3i-VT-21Z" id="rxL-uJ-EY4"/>
+                        <outlet property="longitudeTF" destination="gei-9f-gOf" id="R27-hq-Dod"/>
+                        <outlet property="roomNameTF" destination="kam-r3-H7c" id="rky-U2-z6d"/>
+                        <outlet property="roomNumberTF" destination="foF-fz-8cL" id="z5X-d6-23U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iI1-I5-4jx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1KW-mI-vma" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1619" y="598"/>
         </scene>
@@ -340,7 +378,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Find Classroom" id="w7w-zF-kfJ">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="KTx-fN-oBb"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="KTx-fN-oBb">
+                                            <connections>
+                                                <segue destination="xK9-sa-WV3" kind="unwind" unwindAction="unwindToThisViewController:" id="qHT-xK-jSi"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" id="er7-ng-YZX"/>
                                     </navigationItem>
                                 </items>
@@ -349,6 +391,7 @@
                                 <rect key="frame" x="0.0" y="44" width="320" height="475"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="dataSource" destination="XNN-BQ-OO8" id="Ebd-as-VdC"/>
                                     <outlet property="delegate" destination="XNN-BQ-OO8" id="asv-8c-Q4W"/>
                                 </connections>
                             </tableView>
@@ -359,6 +402,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cu3-1o-FMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xK9-sa-WV3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1679" y="-88"/>
         </scene>

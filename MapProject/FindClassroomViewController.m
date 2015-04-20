@@ -18,6 +18,10 @@
 
 @synthesize mainDelegate;
 
+-(IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue {
+    
+}
+
 #pragma mark Table Methods
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -62,6 +66,7 @@
     [super viewDidLoad];
     
     mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [mainDelegate readFromDatabase];
 }
 
 - (void)didReceiveMemoryWarning {

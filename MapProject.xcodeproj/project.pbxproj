@@ -10,7 +10,6 @@
 		AEADB2F91ADF173D00C8EF07 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB2F81ADF173D00C8EF07 /* MapViewController.m */; };
 		AEADB2FC1ADF180900C8EF07 /* FavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB2FB1ADF180900C8EF07 /* FavouritesViewController.m */; };
 		AEADB3001ADF18C000C8EF07 /* AddClassroomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB2FF1ADF18C000C8EF07 /* AddClassroomViewController.m */; };
-		AEADB3031ADF193600C8EF07 /* EditClassroomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3021ADF193600C8EF07 /* EditClassroomViewController.m */; };
 		AEADB3061ADF1D9400C8EF07 /* EditFavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3051ADF1D9400C8EF07 /* EditFavouritesViewController.m */; };
 		AEADB3091ADF1DCC00C8EF07 /* AddFavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB3081ADF1DCC00C8EF07 /* AddFavouritesViewController.m */; };
 		AEADB30D1ADF2C2000C8EF07 /* FindClassroomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEADB30C1ADF2C2000C8EF07 /* FindClassroomViewController.m */; };
@@ -54,8 +53,6 @@
 		AEADB2FB1ADF180900C8EF07 /* FavouritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesViewController.m; sourceTree = "<group>"; };
 		AEADB2FE1ADF18C000C8EF07 /* AddClassroomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClassroomViewController.h; sourceTree = "<group>"; };
 		AEADB2FF1ADF18C000C8EF07 /* AddClassroomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClassroomViewController.m; sourceTree = "<group>"; };
-		AEADB3011ADF193600C8EF07 /* EditClassroomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditClassroomViewController.h; sourceTree = "<group>"; };
-		AEADB3021ADF193600C8EF07 /* EditClassroomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditClassroomViewController.m; sourceTree = "<group>"; };
 		AEADB3041ADF1D9400C8EF07 /* EditFavouritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFavouritesViewController.h; sourceTree = "<group>"; };
 		AEADB3051ADF1D9400C8EF07 /* EditFavouritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFavouritesViewController.m; sourceTree = "<group>"; };
 		AEADB3071ADF1DCC00C8EF07 /* AddFavouritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFavouritesViewController.h; sourceTree = "<group>"; };
@@ -160,8 +157,6 @@
 			children = (
 				AEADB2FE1ADF18C000C8EF07 /* AddClassroomViewController.h */,
 				AEADB2FF1ADF18C000C8EF07 /* AddClassroomViewController.m */,
-				AEADB3011ADF193600C8EF07 /* EditClassroomViewController.h */,
-				AEADB3021ADF193600C8EF07 /* EditClassroomViewController.m */,
 				AEADB30B1ADF2C2000C8EF07 /* FindClassroomViewController.h */,
 				AEADB30C1ADF2C2000C8EF07 /* FindClassroomViewController.m */,
 				AEADB3131ADF333600C8EF07 /* SheridanWebViewController.h */,
@@ -409,7 +404,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEADB3031ADF193600C8EF07 /* EditClassroomViewController.m in Sources */,
 				AEADB3001ADF18C000C8EF07 /* AddClassroomViewController.m in Sources */,
 				AEADB2FC1ADF180900C8EF07 /* FavouritesViewController.m in Sources */,
 				AEADB32D1ADF5E4800C8EF07 /* ClassroomTableViewCell.m in Sources */,

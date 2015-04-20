@@ -14,9 +14,29 @@
 
 @implementation SheridanWebViewController
 
+@synthesize sheridanPage, activity;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSURL *urlAdddress = [NSURL URLWithString:@"https://www.sheridancollege.ca/about/campus-locations/trafalgar.aspx"];
+    NSURLRequest *url = [NSURLRequest requestWithURL:urlAdddress];
+    
+    [sheridanPage loadRequest:url];
+}
+
+-(IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue {
+    
+}
+
+- (void) webViewDidStartLoad: (UIWebView *)webView {
+    [activity setHidden: NO];
+    [activity startAnimating];
+}
+
+- (void) webViewDidFinishLoad:(UIWebView *)webView {
+    [activity setHidden:YES];
+    [activity stopAnimating];
 }
 
 - (void)didReceiveMemoryWarning {

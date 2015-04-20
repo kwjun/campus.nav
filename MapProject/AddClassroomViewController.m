@@ -15,9 +15,59 @@
 
 @implementation AddClassroomViewController
 
+@synthesize dbDelegate, roomNumberTF, roomNameTF, longitudeTF, latitudeTF, descriptionTF, addRoomButton;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    dbDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
+-(IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue {
+    
+}
+
+-(IBAction)addRoomToDatabase:(id)sender {
+    
+    int exit = 0;
+    
+    if ([self checkEmpty:roomNumberTF.text])
+        exit = 1;
+    
+    if ([self checkEmpty:roomNameTF.text])
+        exit = 1;
+    
+    if ([self checkEmpty:longitudeTF.text])
+        exit = 1;
+
+    if ([self checkEmpty:latitudeTF.text])
+        exit = 1;
+    
+    if ([self checkEmpty:descriptionTF.text])
+        exit = 1;
+    
+    if (exit == 0) {
+        NSLog(@"Added something to database");
+        [dbDelegate insertIntoDatabase:[[Classroom alloc] initWithData:roomNumberTF.text theName:roomNameTF.text theLatitude:latitudeTF.text theLongitude:latitudeTF.text theDescription:descriptionTF.text]];
+    } else {
+        //Error, empty
+        NSLog(@"Did not add something to database");
+    }
+    
+    [dbDelegate readFromDatabase];
+
+}
+
+-(BOOL)checkEmpty:(NSString *)check {
+    
+    if ([check isEqualToString:@""])
+        return YES;
+    
+    return NO;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
 }
 
 - (void)didReceiveMemoryWarning {
