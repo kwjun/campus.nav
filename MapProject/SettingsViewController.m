@@ -18,16 +18,17 @@
     [btnLang setTitle:NSLocalizedString(@"lang", nil) forState:UIControlStateNormal];
     
     
-    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"]);
-    NSLog(@"te");
+    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"]);
+    NSLog(@"%@", [[NSLocale preferredLanguages] objectAtIndex:0]);
 }
 
 -(IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue {
     //Refresh language
-    //[btnLang setTitle:NSLocalizedString(@"lang", nil) forState:UIControlStateNormal];
-    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"Localizable" ofType:@"strings" inDirectory:nil forLocalization:@"ko"];
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"Localizable" ofType:@"strings" inDirectory:nil forLocalization:[[NSLocale preferredLanguages] objectAtIndex:0]];
+    
     NSBundle *localizableBundle = [[NSBundle alloc] initWithPath:[bundlePath stringByDeletingLastPathComponent]];
     [btnLang setTitle:NSLocalizedStringFromTableInBundle(@"lang", nil, localizableBundle, nil) forState:UIControlStateNormal];
+    NSLog(@"%@", [[NSLocale preferredLanguages] objectAtIndex:0]);
 }
 
 - (void)didReceiveMemoryWarning {

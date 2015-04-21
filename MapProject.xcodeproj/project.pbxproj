@@ -93,6 +93,7 @@
 		AEF364131AE57F9E0075BC2D /* addNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addNew.png; sourceTree = "<group>"; };
 		AEF364141AE57F9E0075BC2D /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		AEF364151AE57F9E0075BC2D /* roomIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roomIcon.png; sourceTree = "<group>"; };
+		BFC3523B1AE69CDC000BB30F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BFD7B1AA1AE60599005747FF /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		BFD7B1AB1AE60599005747FF /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		BFD7B1AD1AE646D4005747FF /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
@@ -439,7 +440,6 @@
 				AEADB3181ADF33DB00C8EF07 /* Classroom.m in Sources */,
 				AEADB2F91ADF173D00C8EF07 /* MapViewController.m in Sources */,
 				AED101651AE5779F00B88C56 /* MapViewAnnotation.m in Sources */,
-				AEC9FF6F1AE635CA00CA83F0 /* EventViewController.m in Sources */,
 				AEADB30D1ADF2C2000C8EF07 /* FindClassroomViewController.m in Sources */,
 				BFD7B1AC1AE60599005747FF /* SettingsViewController.m in Sources */,
 				BFD7B1CA1AE67D83005747FF /* SupportWebViewController.m in Sources */,
@@ -488,6 +488,7 @@
 			children = (
 				BFD7B1C11AE66021005747FF /* Base */,
 				BFD7B1C31AE66022005747FF /* ko */,
+				BFC3523B1AE69CDC000BB30F /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
