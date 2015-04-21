@@ -165,7 +165,7 @@
                                     <navigationItem title="Sheridan Information" id="QrJ-Zc-PeF">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="f3E-Xu-Ns6">
                                             <connections>
-                                                <segue destination="AzE-wV-p9a" kind="unwind" unwindAction="unwindToThisViewController:" id="CoW-d3-Yop"/>
+                                                <segue destination="AzE-wV-p9a" kind="unwind" unwindAction="unwindToThisViewController:" id="bpC-jZ-KwR"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -194,7 +194,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqW-fm-zzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="AzE-wV-p9a" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1346" y="-639"/>
+            <point key="canvasLocation" x="1274" y="-602"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0QD-dA-rcx">
@@ -256,7 +256,7 @@
                                     <navigationItem title="Add Classroom" id="w3b-UU-DFS" propertyAccessControl="none">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="mkG-I8-uV7">
                                             <connections>
-                                                <segue destination="1KW-mI-vma" kind="unwind" unwindAction="unwindToThisViewController:" id="6oW-dJ-NcK"/>
+                                                <segue destination="1KW-mI-vma" kind="unwind" unwindAction="unwindToThisViewController:" id="21e-yt-ljh"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Add" id="7T5-7R-9WP">
@@ -380,10 +380,14 @@
                                     <navigationItem title="Find Classroom" id="w7w-zF-kfJ">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="KTx-fN-oBb">
                                             <connections>
-                                                <segue destination="xK9-sa-WV3" kind="unwind" unwindAction="unwindToThisViewController:" id="qHT-xK-jSi"/>
+                                                <segue destination="xK9-sa-WV3" kind="unwind" unwindAction="unwindToThisViewController:" id="ZGb-TJ-TSW"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" id="er7-ng-YZX"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Go" id="43E-Y6-Q20">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="ShowMap" id="pe5-jd-npl"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -400,11 +404,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Rooms" image="roomIcon.png" id="thl-X2-PU4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="goToMap" destination="43E-Y6-Q20" id="5R3-kg-pBv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cu3-1o-FMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="xK9-sa-WV3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1679" y="-88"/>
+            <point key="canvasLocation" x="1629" y="-132"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7ui-p4-2ZX">
@@ -629,5 +636,8 @@
         <image name="info.png" width="25" height="25"/>
         <image name="roomIcon.png" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pe5-jd-npl"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

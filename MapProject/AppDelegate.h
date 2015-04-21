@@ -18,6 +18,7 @@
     
     //Peters array
     NSMutableArray *favRoom;
+    Classroom *roomToView;
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -27,6 +28,8 @@
 @property (strong, nonatomic) NSMutableArray *classrooms;
 
 @property (strong, nonatomic) NSMutableArray *favRoom;
+
+@property (strong, nonatomic) Classroom *roomToView;
 
 -(void)insertIntoDatabase:(Classroom *) classroom;
 -(void)checkAndCreateDatabase;

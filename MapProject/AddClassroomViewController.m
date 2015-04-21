@@ -30,6 +30,8 @@
     
     int exit = 0;
     
+    
+    
     if ([self checkEmpty:roomNumberTF.text])
         exit = 1;
     
@@ -47,7 +49,18 @@
     
     if (exit == 0) {
         NSLog(@"Added something to database");
-        [dbDelegate insertIntoDatabase:[[Classroom alloc] initWithData:roomNumberTF.text theName:roomNameTF.text theLatitude:latitudeTF.text theLongitude:latitudeTF.text theDescription:descriptionTF.text]];
+        
+        Classroom *newRoom = [[Classroom alloc] initWithData:roomNumberTF.text theName:roomNameTF.text theLatitude:latitudeTF.text theLongitude:longitudeTF.text theDescription:descriptionTF.text];
+        
+        NSString* message = [NSString stringWithFormat:@"Added to database: \nRoom Number: %@\nRoom Name: %@\nLongitude: %@\nLatitude: %@\nRoomDescription: %@\n", newRoom.roomNumber, newRoom.name, newRoom.longitude, newRoom.latitude, newRoom.roomDescription];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Add to database?" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        
+        
+        alert.tag = 1;
+        [alert show];
+        
+        [dbDelegate insertIntoDatabase:newRoom];
     } else {
         //Error, empty
         NSLog(@"Did not add something to database");

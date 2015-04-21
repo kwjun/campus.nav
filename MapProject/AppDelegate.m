@@ -15,7 +15,7 @@
 
 @implementation AppDelegate
 
-@synthesize databaseName, databasePath, classrooms, favRoom;
+@synthesize databaseName, databasePath, classrooms, favRoom, roomToView;
 
 #pragma mark Database Implementation
 
@@ -79,6 +79,28 @@
     }
 
 }
+
+-(void)dropFromDB {
+    sqlite3 *database;
+    
+    if (sqlite3_open([self.databasePath UTF8String], &database) == SQLITE_OK) {
+        
+        const char *sqlStatement = "INSERT INTO Classrooms VALUES('C201', 'The C Room', '43.468522', '-79.699176', 'This room is in the C building, on the second floor and has math classes in it')";
+        sqlite3_stmt *compiledStatement;
+        
+        if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+            
+            }
+        if (sqlite3_step(compiledStatement) != SQLITE_DONE) {
+            NSLog(@"Error: %s", sqlite3_errmsg(database));
+        } else {
+            NSLog(@"Insert into row id = %lld", sqlite3_last_insert_rowid(database));
+        }
+        sqlite3_finalize(compiledStatement);
+    }
+    sqlite3_close(database);
+}
+
 
 -(void)insertIntoDatabase:(Classroom *)classroom {
     sqlite3 *database;
@@ -236,9 +258,12 @@
     self.favRoom = [[NSMutableArray alloc] init];
     self.databaseName = @"Classrooms.sql";
     
+    self.roomToView = nil;
+    
     [self checkAndCreateDatabase];
     [self readFavDataFromDatabase];
     [self readFromDatabase];
+    [self dropFromDB];
     
     return YES;
 }

@@ -16,7 +16,7 @@
 
 @implementation FindClassroomViewController
 
-@synthesize mainDelegate;
+@synthesize mainDelegate, goToMap;
 
 -(IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue {
     
@@ -60,11 +60,18 @@
     
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger row = [indexPath row];
+    
+    mainDelegate.roomToView = [mainDelegate.classrooms objectAtIndex:row];
+    
+}
+
 #pragma mark Application Methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [mainDelegate readFromDatabase];
 }

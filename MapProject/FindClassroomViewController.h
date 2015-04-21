@@ -18,9 +18,12 @@
 
 @interface FindClassroomViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
     AppDelegate *dbDelegate;
+    IBOutlet UIBarButtonItem *goToMap;
+    Classroom *roomToView;
 }
 
 @property (nonatomic, strong) AppDelegate *mainDelegate;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *goToMap;
 
 -(IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue;
 
