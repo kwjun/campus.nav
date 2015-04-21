@@ -32,6 +32,7 @@
 		AEF364161AE57F9E0075BC2D /* addNew.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF364131AE57F9E0075BC2D /* addNew.png */; };
 		AEF364171AE57F9E0075BC2D /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF364141AE57F9E0075BC2D /* info.png */; };
 		AEF364181AE57F9E0075BC2D /* roomIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF364151AE57F9E0075BC2D /* roomIcon.png */; };
+		BFD7B1AC1AE60599005747FF /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD7B1AB1AE60599005747FF /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		AEF364131AE57F9E0075BC2D /* addNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addNew.png; sourceTree = "<group>"; };
 		AEF364141AE57F9E0075BC2D /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		AEF364151AE57F9E0075BC2D /* roomIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roomIcon.png; sourceTree = "<group>"; };
+		BFD7B1AA1AE60599005747FF /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		BFD7B1AB1AE60599005747FF /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 		AEADB3101ADF2C9500C8EF07 /* Juns View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BFD7B1AA1AE60599005747FF /* SettingsViewController.h */,
+				BFD7B1AB1AE60599005747FF /* SettingsViewController.m */,
 			);
 			name = "Juns View Controllers";
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				AEADB2F91ADF173D00C8EF07 /* MapViewController.m in Sources */,
 				AED101651AE5779F00B88C56 /* MapViewAnnotation.m in Sources */,
 				AEADB30D1ADF2C2000C8EF07 /* FindClassroomViewController.m in Sources */,
+				BFD7B1AC1AE60599005747FF /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
