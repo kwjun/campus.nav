@@ -2,10 +2,9 @@
 //  AppDelegate.h
 //  MapProject
 //
-//  Created by xcode on 2015-03-30.
-//  Copyright (c) 2015 Alex Estrop. All rights reserved.
+//  Created by Gordon Cox
 //
-
+//
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
 #import "Classroom.h"
@@ -36,7 +35,7 @@
 -(void)readFromDatabase;
 -(void)insertIntoFavDatabase:(FavRooms *)fRoom;
 -(void)readFavDataFromDatabase;
-
+-(void)deleteFromDb:(FavRooms *)fRoom;
 
 
 - (NSString *) validateNilString:(NSString *)strValue;

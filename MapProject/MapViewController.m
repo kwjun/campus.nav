@@ -21,8 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
     // Do any additional setup after loading the view.
     mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [mainDelegate readFavDataFromDatabase];
@@ -35,14 +33,23 @@
     region.center.longitude = -79.699934;
     region.span.latitudeDelta = 0.01f;
     region.span.longitudeDelta = 0.01f;
-    [mapView setRegion:region animated:YES];    
+    [mapView setRegion:region animated:YES];
+    
     self.locationManager = [[CLLocationManager alloc] init];
     [self.mapView addAnnotations:[self createAnnotations]];
     
-    
 }
 
-
+-(void)viewDidAppear:(BOOL)animated{
+    [mainDelegate readFavDataFromDatabase];
+    NSMutableArray *annotations = [NSMutableArray array];
+    for (id annotation in [mapView annotations])
+    {
+        [annotations addObject:annotation];
+    }
+    [self.mapView removeAnnotations:annotations];
+    [self.mapView addAnnotations:[self createAnnotations]];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -58,33 +65,6 @@
  // Pass the selected object to the new view controller.
  }
  */
-
--(MapViewAnnotation *)addRoomToMap {
-    
-    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
-    f.numberStyle = NSNumberFormatterDecimalStyle;
-    
-    NSNumber *lat = [f numberFromString:[[mainDelegate roomToView] latitude]];
-    NSNumber *lon = [f numberFromString:[[mainDelegate roomToView] longitude]];
-    
-    NSString *roomNum = [[mainDelegate roomToView] roomNumber];
-    
-    if ([mainDelegate roomToView] != nil) {
-        CLLocationCoordinate2D coord;
-        
-        coord.latitude = lat.doubleValue;
-        coord.longitude = lon.doubleValue;
-        
-        MapViewAnnotation *annotation = [[MapViewAnnotation alloc] initWithTitle:roomNum AndCoordinate:coord];
-        
-        return annotation;
-    }
-    
-   
-    
-    return nil;
-    
-}
 
 -(NSMutableArray *)createAnnotations
 {
@@ -111,9 +91,38 @@
     
     if ([mainDelegate roomToView] != nil)
         [annotations addObject:[self addRoomToMap]];
+
     
     return annotations;
 }
+
+-(MapViewAnnotation *)addRoomToMap {
+    
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    f.numberStyle = NSNumberFormatterDecimalStyle;
+    
+    NSNumber *lat = [f numberFromString:[[mainDelegate roomToView] latitude]];
+    NSNumber *lon = [f numberFromString:[[mainDelegate roomToView] longitude]];
+    
+    NSString *roomNum = [[mainDelegate roomToView] roomNumber];
+    
+    if ([mainDelegate roomToView] != nil) {
+        CLLocationCoordinate2D coord;
+        
+        coord.latitude = lat.doubleValue;
+        coord.longitude = lon.doubleValue;
+        
+        MapViewAnnotation *annotation = [[MapViewAnnotation alloc] initWithTitle:roomNum AndCoordinate:coord];
+        
+        return annotation;
+    }
+    
+    
+    
+    return nil;
+    
+}
+
 
 -(IBAction)unwindToThisViewController:(UIStoryboardSegue *) sender
 {

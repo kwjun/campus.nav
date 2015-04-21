@@ -22,4 +22,6 @@
 @property(strong, nonatomic)CLLocationManager *locationManager;
 @property(strong, nonatomic)AppDelegate *mainDelegate;
 
+-(NSMutableArray *)createAnnotations;
+
 @end

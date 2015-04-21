@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  MapProject
 //
-//  Created by xcode on 2015-03-30.
-//  Copyright (c) 2015 Alex Estrop. All rights reserved.
+//  Created by Gordon Cox
+//
 //
 
 #import "AppDelegate.h"
@@ -308,6 +308,7 @@
             sqlite3_bind_text(compiledStatement, 1, [fRoom.room UTF8String], -1, SQLITE_TRANSIENT);
             sqlite3_bind_text(compiledStatement, 2, [fRoom.latitude UTF8String], -1, SQLITE_TRANSIENT);
             sqlite3_bind_text(compiledStatement, 3, [fRoom.longitude UTF8String], -1, SQLITE_TRANSIENT);
+            NSLog(@"Insert done");
         }
         if(sqlite3_step(compiledStatement) == SQLITE_DONE)
         {
@@ -348,8 +349,6 @@
                 
                 FavRooms *data = [[FavRooms alloc] initWithData:room roomLat:lat roomLong:lon];
                 [self.favRoom addObject:data];
-                
-                NSLog(@"%@, %@, %@", [[favRoom objectAtIndex:0]room], [[favRoom objectAtIndex:0]latitude], [[favRoom objectAtIndex:0]longitude]);
             }
         }
         else
@@ -361,6 +360,38 @@
         // Release the compiled statement from memory
         sqlite3_finalize(compiledStatement);
         
+    }
+    sqlite3_close(database);
+}
+
+-(void)deleteFromDb:(FavRooms *)fRoom
+{
+    sqlite3 *database;
+    
+    // Open the database from the users filessytem
+    if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+        NSLog(@"In delete db");
+        
+        NSString *deleteSQL = [NSString stringWithFormat:@"DELETE FROM favourites WHERE room = ?"];
+        
+        const char *utf8Delete = [deleteSQL UTF8String];
+        sqlite3_stmt *compiledStatement;
+        sqlite3_prepare_v2(database, utf8Delete, -1, &compiledStatement, NULL);
+        
+        sqlite3_bind_text(compiledStatement, 1, [fRoom.room UTF8String], -1, SQLITE_TRANSIENT);
+        
+        
+        if(sqlite3_step(compiledStatement) == SQLITE_DONE)
+        {
+            NSLog(@"Delete Successful");
+        }
+        else
+        {
+            NSLog(@"Error: %s", sqlite3_errmsg(database));
+            
+        }
+        // Release the compiled statement from memory
+        sqlite3_finalize(compiledStatement);
     }
     sqlite3_close(database);
 }
