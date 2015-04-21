@@ -12,7 +12,7 @@
 
 @implementation FavouritesViewController
 
-@synthesize mainDelegate, selectedIndex, tableView;
+@synthesize mainDelegate, selectedIndex;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

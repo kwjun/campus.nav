@@ -13,10 +13,8 @@
 {
     AppDelegate *mainDelegate;
     NSIndexPath *selectedIndex;
-    UITableView *tableView;
 }
 
 @property(strong,nonatomic) AppDelegate *mainDelegate;
 @property(strong,nonatomic) NSIndexPath *selectedIndex;
-@property(strong,nonatomic) UITableView *tableView;
 @end
