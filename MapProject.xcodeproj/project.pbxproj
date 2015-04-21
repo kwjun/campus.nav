@@ -25,7 +25,6 @@
 		AEBDF42D1AC9884E00C0BBDE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBDF42B1AC9884E00C0BBDE /* LaunchScreen.xib */; };
 		AEBDF4391AC9884E00C0BBDE /* MapProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4381AC9884E00C0BBDE /* MapProjectTests.m */; };
 		AEBDF4441AC9FCDC00C0BBDE /* 1427768975_0007_Location.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBDF4431AC9FCDC00C0BBDE /* 1427768975_0007_Location.png */; };
-		AEC9FF6F1AE635CA00CA83F0 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC9FF6E1AE635CA00CA83F0 /* EventViewController.m */; };
 		AED101651AE5779F00B88C56 /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AED101621AE5779F00B88C56 /* MapViewAnnotation.m */; };
 		AED101661AE5779F00B88C56 /* FavRooms.m in Sources */ = {isa = PBXBuildFile; fileRef = AED101641AE5779F00B88C56 /* FavRooms.m */; };
 		AED101691AE57A0200B88C56 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED101681AE57A0200B88C56 /* MapKit.framework */; };
