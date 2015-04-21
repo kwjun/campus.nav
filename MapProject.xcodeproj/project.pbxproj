@@ -25,6 +25,7 @@
 		AEBDF42D1AC9884E00C0BBDE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBDF42B1AC9884E00C0BBDE /* LaunchScreen.xib */; };
 		AEBDF4391AC9884E00C0BBDE /* MapProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4381AC9884E00C0BBDE /* MapProjectTests.m */; };
 		AEBDF4441AC9FCDC00C0BBDE /* 1427768975_0007_Location.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBDF4431AC9FCDC00C0BBDE /* 1427768975_0007_Location.png */; };
+		AEC9FF6F1AE635CA00CA83F0 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC9FF6E1AE635CA00CA83F0 /* EventViewController.m */; };
 		AED101651AE5779F00B88C56 /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AED101621AE5779F00B88C56 /* MapViewAnnotation.m */; };
 		AED101661AE5779F00B88C56 /* FavRooms.m in Sources */ = {isa = PBXBuildFile; fileRef = AED101641AE5779F00B88C56 /* FavRooms.m */; };
 		AED101691AE57A0200B88C56 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED101681AE57A0200B88C56 /* MapKit.framework */; };
@@ -79,6 +80,8 @@
 		AEBDF4371AC9884E00C0BBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBDF4381AC9884E00C0BBDE /* MapProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapProjectTests.m; sourceTree = "<group>"; };
 		AEBDF4431AC9FCDC00C0BBDE /* 1427768975_0007_Location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1427768975_0007_Location.png; sourceTree = "<group>"; };
+		AEC9FF6D1AE635CA00CA83F0 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		AEC9FF6E1AE635CA00CA83F0 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
 		AED101611AE5779F00B88C56 /* MapViewAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewAnnotation.h; sourceTree = "<group>"; };
 		AED101621AE5779F00B88C56 /* MapViewAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewAnnotation.m; sourceTree = "<group>"; };
 		AED101631AE5779F00B88C56 /* FavRooms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavRooms.h; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 			children = (
 				AEBDF4231AC9884D00C0BBDE /* ViewController.h */,
 				AEBDF4241AC9884D00C0BBDE /* ViewController.m */,
+				AEC9FF6D1AE635CA00CA83F0 /* EventViewController.h */,
+				AEC9FF6E1AE635CA00CA83F0 /* EventViewController.m */,
 			);
 			name = "Alexs View Controllers";
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				AEADB3181ADF33DB00C8EF07 /* Classroom.m in Sources */,
 				AEADB2F91ADF173D00C8EF07 /* MapViewController.m in Sources */,
 				AED101651AE5779F00B88C56 /* MapViewAnnotation.m in Sources */,
+				AEC9FF6F1AE635CA00CA83F0 /* EventViewController.m in Sources */,
 				AEADB30D1ADF2C2000C8EF07 /* FindClassroomViewController.m in Sources */,
 				BFD7B1AC1AE60599005747FF /* SettingsViewController.m in Sources */,
 			);
