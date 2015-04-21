@@ -41,15 +41,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJW-b1-L5Z">
-                                <rect key="frame" x="137" y="448" width="57" height="30"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="V6Z-DA-WBu" kind="presentation" id="zZu-7r-TNv"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright 2015 Alex Estrop, KwangJun Ko, Gordon Cox Peter Liu" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIk-yR-LpD">
                                 <rect key="frame" x="26" y="500" width="264" height="60"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -63,6 +54,15 @@
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="modal" id="JtB-c1-OG4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJW-b1-L5Z">
+                                <rect key="frame" x="132" y="448" width="57" height="30"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="V6Z-DA-WBu" kind="presentation" id="zZu-7r-TNv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -585,7 +585,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2bK-tU-m2c"/>
-        <segue reference="pe5-jd-npl"/>
+        <segue reference="JtB-c1-OG4"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
