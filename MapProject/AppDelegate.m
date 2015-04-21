@@ -17,6 +17,12 @@
 
 @synthesize databaseName, databasePath, classrooms, favRoom, roomToView;
 
+-(void)resetLocale:(NSString *)localeId
+{
+    [[NSUserDefaults standardUserDefaults] setObject:@[localeId] forKey:@"AppleLanguages"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 #pragma mark Database Implementation
 
 -(void)checkAndCreateDatabase {

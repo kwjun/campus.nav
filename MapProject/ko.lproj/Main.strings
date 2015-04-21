@@ -1,0 +1,110 @@
+
+/* Class = "UILabel"; text = "Latitude:"; ObjectID = "0HR-nT-991"; */
+"0HR-nT-991.text" = "Latitude:";
+
+/* Class = "UITabBarItem"; title = "Add Room"; ObjectID = "0bF-pH-jqz"; */
+"0bF-pH-jqz.title" = "Add Room";
+
+/* Class = "UILabel"; text = "Campus Navigator"; ObjectID = "2cz-PT-utM"; */
+"2cz-PT-utM.text" = "캠퍼스 네비";
+
+"tJW-b1-L5Z.text" = "설정";
+
+/* Class = "UIBarButtonItem"; title = "Add "; ObjectID = "2wn-Bu-RaJ"; */
+"2wn-Bu-RaJ.title" = "Add ";
+
+/* Class = "UIBarButtonItem"; title = "Go"; ObjectID = "43E-Y6-Q20"; */
+"43E-Y6-Q20.title" = "Go";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "7KZ-ht-2fk"; */
+"7KZ-ht-2fk.normalTitle" = "Save";
+
+/* Class = "UIBarButtonItem"; title = "Add"; ObjectID = "7T5-7R-9WP"; */
+"7T5-7R-9WP.title" = "Add";
+
+/* Class = "UILabel"; text = "Longitude:"; ObjectID = "Afa-Z4-1rb"; */
+"Afa-Z4-1rb.text" = "Longitude:";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "DBo-gd-HhB"; */
+"DBo-gd-HhB.title" = "Back";
+
+/* Class = "UILabel"; text = "Room"; ObjectID = "Hro-NN-8HU"; */
+"Hro-NN-8HU.text" = "Room";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "JjA-M3-drd"; */
+"JjA-M3-drd.title" = "Settings";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "KTx-fN-oBb"; */
+"KTx-fN-oBb.title" = "Back";
+
+/* Class = "UINavigationItem"; title = "Map"; ObjectID = "MyH-fP-0f2"; */
+"MyH-fP-0f2.title" = "Map";
+
+/* Class = "UIBarButtonItem"; title = "Home"; ObjectID = "NAc-ZR-DrN"; */
+"NAc-ZR-DrN.title" = "Home";
+
+/* Class = "UINavigationItem"; title = "Favorites"; ObjectID = "QW5-N8-JwQ"; */
+"QW5-N8-JwQ.title" = "Favorites";
+
+/* Class = "UINavigationItem"; title = "Sheridan Information"; ObjectID = "QrJ-Zc-PeF"; */
+"QrJ-Zc-PeF.title" = "Sheridan Information";
+
+/* Class = "UITabBarItem"; title = "Info"; ObjectID = "VBz-tR-1jp"; */
+"VBz-tR-1jp.title" = "Info";
+
+/* Class = "UIButton"; normalTitle = "Events"; ObjectID = "Yqo-Qe-bU3"; */
+"Yqo-Qe-bU3.normalTitle" = "이벤트";
+
+/* Class = "UINavigationItem"; title = "Add Favourite"; ObjectID = "a9n-vB-oOF"; */
+"a9n-vB-oOF.title" = "Add Favourite";
+
+/* Class = "UILabel"; text = "Room Number:"; ObjectID = "adl-0V-mPN"; */
+"adl-0V-mPN.text" = "Room Number:";
+
+/* Class = "UILabel"; text = "Copyright 2015 Alex Estrop, KwangJun Ko, Gordon Cox Peter Liu"; ObjectID = "dIk-yR-LpD"; */
+"dIk-yR-LpD.text" = "Copyright 2015 Alex Estrop, KwangJun Ko, Gordon Cox Peter Liu";
+
+/* Class = "UIBarButtonItem"; title = "Settings"; ObjectID = "dxC-bP-qtd"; */
+"dxC-bP-qtd.title" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "Find Class"; ObjectID = "eob-Dy-1PI"; */
+"eob-Dy-1PI.normalTitle" = "Find Class";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "f3E-Xu-Ns6"; */
+"f3E-Xu-Ns6.title" = "Back";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "kOY-QV-hZT"; */
+"kOY-QV-hZT.title" = "Back";
+
+/* Class = "UILabel"; text = "Latitude"; ObjectID = "lh2-61-Cx3"; */
+"lh2-61-Cx3.text" = "Latitude";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "mkG-I8-uV7"; */
+"mkG-I8-uV7.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Map"; ObjectID = "nKm-Kn-bzh"; */
+"nKm-Kn-bzh.normalTitle" = "지도";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "nRP-PA-Xgl"; */
+"nRP-PA-Xgl.title" = "Back";
+
+/* Class = "UILabel"; text = "Room Name:"; ObjectID = "osv-9X-OYe"; */
+"osv-9X-OYe.text" = "Room Name:";
+
+/* Class = "UILabel"; text = "Description:"; ObjectID = "qcY-eT-Rth"; */
+"qcY-eT-Rth.text" = "Description:";
+
+/* Class = "UIButton"; normalTitle = "Settings"; ObjectID = "tJW-b1-L5Z"; */
+"tJW-b1-L5Z.normalTitle" = "Settings";
+
+/* Class = "UITabBarItem"; title = "Rooms"; ObjectID = "thl-X2-PU4"; */
+"thl-X2-PU4.title" = "Rooms";
+
+/* Class = "UILabel"; text = "Longitude"; ObjectID = "uZy-yS-bGr"; */
+"uZy-yS-bGr.text" = "Longitude";
+
+/* Class = "UINavigationItem"; title = "Add Classroom"; ObjectID = "w3b-UU-DFS"; */
+"w3b-UU-DFS.title" = "Add Classroom";
+
+/* Class = "UINavigationItem"; title = "Find Classroom"; ObjectID = "w7w-zF-kfJ"; */
+"w7w-zF-kfJ.title" = "Find Classroom";

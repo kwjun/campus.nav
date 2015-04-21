@@ -8,15 +8,26 @@
 
 #import "SettingsViewController.h"
 
-@interface SettingsViewController ()
-
-@end
 
 @implementation SettingsViewController
-
+@synthesize btnLang;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [btnLang setTitle:NSLocalizedString(@"lang", nil) forState:UIControlStateNormal];
+    
+    
+    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"]);
+    NSLog(@"te");
+}
+
+-(IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue {
+    //Refresh language
+    //[btnLang setTitle:NSLocalizedString(@"lang", nil) forState:UIControlStateNormal];
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"Localizable" ofType:@"strings" inDirectory:nil forLocalization:@"ko"];
+    NSBundle *localizableBundle = [[NSBundle alloc] initWithPath:[bundlePath stringByDeletingLastPathComponent]];
+    [btnLang setTitle:NSLocalizedStringFromTableInBundle(@"lang", nil, localizableBundle, nil) forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {

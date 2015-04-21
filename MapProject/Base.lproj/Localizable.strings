@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  MapProject
+
+  Created by KwangJun Ko on 2015-04-21.
+  Copyright (c) 2015 Alex Estrop. All rights reserved.
+*/
+
+"lang" = "English";
+"supportUrl" = "http://www.apple.com/";
+"support" = "Support";
+"Settings" = "Settings";
+"Back" = "Back";

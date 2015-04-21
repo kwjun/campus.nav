@@ -36,7 +36,7 @@
 -(void)insertIntoFavDatabase:(FavRooms *)fRoom;
 -(void)readFavDataFromDatabase;
 -(void)deleteFromDb:(FavRooms *)fRoom;
-
+-(void)resetLocale:(NSString *)localeId;
 
 - (NSString *) validateNilString:(NSString *)strValue;
 

@@ -33,6 +33,9 @@
 		AEF364171AE57F9E0075BC2D /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF364141AE57F9E0075BC2D /* info.png */; };
 		AEF364181AE57F9E0075BC2D /* roomIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF364151AE57F9E0075BC2D /* roomIcon.png */; };
 		BFD7B1AC1AE60599005747FF /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD7B1AB1AE60599005747FF /* SettingsViewController.m */; };
+		BFD7B1C01AE66021005747FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFD7B1C21AE66021005747FF /* Localizable.strings */; };
+		BFD7B1C61AE66C0A005747FF /* LangPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD7B1C51AE66C0A005747FF /* LangPickerViewController.m */; };
+		BFD7B1CA1AE67D83005747FF /* SupportWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD7B1C91AE67D83005747FF /* SupportWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,14 @@
 		AEF364151AE57F9E0075BC2D /* roomIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roomIcon.png; sourceTree = "<group>"; };
 		BFD7B1AA1AE60599005747FF /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		BFD7B1AB1AE60599005747FF /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		BFD7B1AD1AE646D4005747FF /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		BFD7B1AE1AE646D4005747FF /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BFD7B1C11AE66021005747FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BFD7B1C31AE66022005747FF /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BFD7B1C41AE66C0A005747FF /* LangPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LangPickerViewController.h; sourceTree = "<group>"; };
+		BFD7B1C51AE66C0A005747FF /* LangPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LangPickerViewController.m; sourceTree = "<group>"; };
+		BFD7B1C81AE67D83005747FF /* SupportWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupportWebViewController.h; sourceTree = "<group>"; };
+		BFD7B1C91AE67D83005747FF /* SupportWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +204,10 @@
 			children = (
 				BFD7B1AA1AE60599005747FF /* SettingsViewController.h */,
 				BFD7B1AB1AE60599005747FF /* SettingsViewController.m */,
+				BFD7B1C41AE66C0A005747FF /* LangPickerViewController.h */,
+				BFD7B1C51AE66C0A005747FF /* LangPickerViewController.m */,
+				BFD7B1C81AE67D83005747FF /* SupportWebViewController.h */,
+				BFD7B1C91AE67D83005747FF /* SupportWebViewController.m */,
 			);
 			name = "Juns View Controllers";
 			sourceTree = "<group>";
@@ -257,6 +272,7 @@
 			children = (
 				AEBDF41D1AC9884D00C0BBDE /* Info.plist */,
 				AEBDF41E1AC9884D00C0BBDE /* main.m */,
+				BFD7B1C21AE66021005747FF /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -363,6 +379,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = AEBDF4101AC9884D00C0BBDE;
 			productRefGroup = AEBDF41A1AC9884D00C0BBDE /* Products */;
@@ -385,6 +402,7 @@
 				AEF364181AE57F9E0075BC2D /* roomIcon.png in Resources */,
 				AEBDF4441AC9FCDC00C0BBDE /* 1427768975_0007_Location.png in Resources */,
 				AEBDF42D1AC9884E00C0BBDE /* LaunchScreen.xib in Resources */,
+				BFD7B1C01AE66021005747FF /* Localizable.strings in Resources */,
 				AEBDF42A1AC9884E00C0BBDE /* Images.xcassets in Resources */,
 				AEF364171AE57F9E0075BC2D /* info.png in Resources */,
 			);
@@ -409,6 +427,7 @@
 				AEADB32D1ADF5E4800C8EF07 /* ClassroomTableViewCell.m in Sources */,
 				AEBDF4251AC9884D00C0BBDE /* ViewController.m in Sources */,
 				AEADB3151ADF333600C8EF07 /* SheridanWebViewController.m in Sources */,
+				BFD7B1C61AE66C0A005747FF /* LangPickerViewController.m in Sources */,
 				AED101661AE5779F00B88C56 /* FavRooms.m in Sources */,
 				AEBDF4221AC9884D00C0BBDE /* AppDelegate.m in Sources */,
 				AEBDF41F1AC9884D00C0BBDE /* main.m in Sources */,
@@ -418,6 +437,7 @@
 				AED101651AE5779F00B88C56 /* MapViewAnnotation.m in Sources */,
 				AEADB30D1ADF2C2000C8EF07 /* FindClassroomViewController.m in Sources */,
 				BFD7B1AC1AE60599005747FF /* SettingsViewController.m in Sources */,
+				BFD7B1CA1AE67D83005747FF /* SupportWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +464,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AEBDF4271AC9884D00C0BBDE /* Base */,
+				BFD7B1AD1AE646D4005747FF /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -452,8 +473,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				AEBDF42C1AC9884E00C0BBDE /* Base */,
+				BFD7B1AE1AE646D4005747FF /* ko */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		BFD7B1C21AE66021005747FF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFD7B1C11AE66021005747FF /* Base */,
+				BFD7B1C31AE66022005747FF /* ko */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

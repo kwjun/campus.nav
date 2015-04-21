@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface SettingsViewController : UIViewController
+{
+    
+    IBOutlet UIButton *btnLang;
 
+    IBOutlet UIButton *lblSupport;
+}
+@property (strong, nonatomic) IBOutlet UIButton *btnLang;
+@property (strong, nonatomic) IBOutlet UIButton *lblSupport;
+-(IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue;
 @end

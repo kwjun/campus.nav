@@ -142,7 +142,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="t1d-Zx-g66" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="669" y="781"/>
+            <point key="canvasLocation" x="621" y="802"/>
         </scene>
         <!--Info-->
         <scene sceneID="nFj-tg-loM">
@@ -214,7 +214,7 @@
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FQh-7M-vXJ">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <color key="barTintColor" red="0.32156862749999998" green="0.1450980392" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.29411764705882354" green="0.14901960784313725" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
@@ -228,16 +228,141 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yf3-jT-IZV">
+                                <rect key="frame" x="10" y="82" width="131" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuG-Ku-270">
+                                <rect key="frame" x="22" y="121" width="263" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="English">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jYy-vk-TDS" kind="presentation" id="9DR-3g-87T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGk-kW-ZIW">
+                                <rect key="frame" x="38" y="494" width="56" height="30"/>
+                                <state key="normal" title="Support">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CDm-A3-bhr" kind="presentation" id="saX-lz-pI5"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.26666666666666666" green="0.15686274509803921" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="btnLang" destination="zuG-Ku-270" id="o43-70-rch"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SL-3F-19J" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="xyQ-G6-dsc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="62"/>
+            <point key="canvasLocation" x="1171" y="62"/>
+        </scene>
+        <!--Support Web View Controller-->
+        <scene sceneID="GAz-Ov-g1C">
+            <objects>
+                <viewController id="CDm-A3-bhr" customClass="SupportWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8fJ-fR-yiU"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZS5-FR-Jrj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4OG-OS-mpA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NK8-Ro-NFy">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="barTintColor" red="0.29411764709999999" green="0.14901960780000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Support" id="05C-lV-enu">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="7tN-Ab-Gvd">
+                                            <connections>
+                                                <segue destination="aFK-Vs-zqp" kind="unwind" unwindAction="unwindToThisViewController:" id="eaM-0R-GqM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qIS-yZ-ZIm">
+                                <rect key="frame" x="-4" y="64" width="329" height="509"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8ko-GI-BRI">
+                                <rect key="frame" x="150" y="309" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="activity" destination="8ko-GI-BRI" id="Lbd-VW-Aic"/>
+                        <outlet property="webView" destination="qIS-yZ-ZIm" id="wiX-JS-Om8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xrc-cV-xXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aFK-Vs-zqp" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1171" y="781"/>
+        </scene>
+        <!--Lang Picker View Controller-->
+        <scene sceneID="k5R-Kh-2Lm">
+            <objects>
+                <viewController id="jYy-vk-TDS" customClass="LangPickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NK2-E6-Kd2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vcd-U8-gdx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w49-MS-q0Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MWK-EB-LfN">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="barTintColor" red="0.32156862749999998" green="0.1450980392" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Language" id="PvU-yH-i4E">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="37t-sh-ide">
+                                            <connections>
+                                                <segue destination="vbl-qt-XHd" kind="unwind" unwindAction="unwindToThisViewController:" id="A3u-Lk-NPU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bHR-7K-0f1">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jYy-vk-TDS" id="LGc-GI-Oa0"/>
+                                    <outlet property="delegate" destination="jYy-vk-TDS" id="CkL-0w-XJJ"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="langPicker" destination="bHR-7K-0f1" id="QCT-pJ-cII"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4S-kj-qap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vbl-qt-XHd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1548" y="62"/>
         </scene>
         <!--Add Room-->
         <scene sceneID="mI5-qu-T6E">
