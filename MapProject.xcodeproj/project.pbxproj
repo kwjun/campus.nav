@@ -26,6 +26,8 @@
 		AEBDF42D1AC9884E00C0BBDE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBDF42B1AC9884E00C0BBDE /* LaunchScreen.xib */; };
 		AEBDF4391AC9884E00C0BBDE /* MapProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBDF4381AC9884E00C0BBDE /* MapProjectTests.m */; };
 		AEBDF4441AC9FCDC00C0BBDE /* 1427768975_0007_Location.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBDF4431AC9FCDC00C0BBDE /* 1427768975_0007_Location.png */; };
+		AEC9FF291AE5B0A300CA83F0 /* Settings-50.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC9FF281AE5B0A300CA83F0 /* Settings-50.png */; };
+		AEC9FF2B1AE5BDFC00CA83F0 /* Map Marker-50.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC9FF2A1AE5BDFC00CA83F0 /* Map Marker-50.png */; };
 		AED101651AE5779F00B88C56 /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AED101621AE5779F00B88C56 /* MapViewAnnotation.m */; };
 		AED101661AE5779F00B88C56 /* FavRooms.m in Sources */ = {isa = PBXBuildFile; fileRef = AED101641AE5779F00B88C56 /* FavRooms.m */; };
 		AED101691AE57A0200B88C56 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED101681AE57A0200B88C56 /* MapKit.framework */; };
@@ -81,6 +83,8 @@
 		AEBDF4371AC9884E00C0BBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBDF4381AC9884E00C0BBDE /* MapProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapProjectTests.m; sourceTree = "<group>"; };
 		AEBDF4431AC9FCDC00C0BBDE /* 1427768975_0007_Location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1427768975_0007_Location.png; sourceTree = "<group>"; };
+		AEC9FF281AE5B0A300CA83F0 /* Settings-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-50.png"; sourceTree = "<group>"; };
+		AEC9FF2A1AE5BDFC00CA83F0 /* Map Marker-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Map Marker-50.png"; sourceTree = "<group>"; };
 		AED101611AE5779F00B88C56 /* MapViewAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewAnnotation.h; sourceTree = "<group>"; };
 		AED101621AE5779F00B88C56 /* MapViewAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewAnnotation.m; sourceTree = "<group>"; };
 		AED101631AE5779F00B88C56 /* FavRooms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavRooms.h; sourceTree = "<group>"; };
@@ -281,6 +285,8 @@
 		AEBDF4421AC9FCC600C0BBDE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AEC9FF2A1AE5BDFC00CA83F0 /* Map Marker-50.png */,
+				AEC9FF281AE5B0A300CA83F0 /* Settings-50.png */,
 				AEF364131AE57F9E0075BC2D /* addNew.png */,
 				AEF364141AE57F9E0075BC2D /* info.png */,
 				AEF364151AE57F9E0075BC2D /* roomIcon.png */,
@@ -385,7 +391,9 @@
 				AEF364181AE57F9E0075BC2D /* roomIcon.png in Resources */,
 				AEBDF4441AC9FCDC00C0BBDE /* 1427768975_0007_Location.png in Resources */,
 				AEBDF42D1AC9884E00C0BBDE /* LaunchScreen.xib in Resources */,
+				AEC9FF291AE5B0A300CA83F0 /* Settings-50.png in Resources */,
 				AEBDF42A1AC9884E00C0BBDE /* Images.xcassets in Resources */,
+				AEC9FF2B1AE5BDFC00CA83F0 /* Map Marker-50.png in Resources */,
 				AEF364171AE57F9E0075BC2D /* info.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

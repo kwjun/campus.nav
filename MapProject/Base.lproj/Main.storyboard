@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xa7-ZI-42B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xa7-ZI-42B">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -59,12 +59,14 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="JtB-c1-OG4"/>
+                                    <segue destination="W3F-MN-Nhp" kind="presentation" id="qmK-Wk-H6N"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="DPr-id-udd"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -72,11 +74,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXb-dP-dhd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="602" y="62"/>
+            <point key="canvasLocation" x="602" y="64"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Maps-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -87,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y5T-Vy-lmG">
-                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="478"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </mapView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eif-Tp-oHh">
@@ -99,49 +102,27 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Map" id="MyH-fP-0f2" colorLabel="IBBuiltInLabel-Orange">
-                                        <barButtonItem key="leftBarButtonItem" title="Home" id="NAc-ZR-DrN"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="NAc-ZR-DrN">
+                                            <connections>
+                                                <segue destination="xa7-ZI-42B" kind="presentation" id="EYi-Zj-eFJ"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Settings" id="dxC-bP-qtd"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tabBar opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogG-qq-Cj3">
-                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="9VM-3C-JWV" colorLabel="IBBuiltInLabel-Red"/>
-                                    <tabBarItem systemItem="recents" id="XB1-9y-3hZ"/>
-                                </items>
-                                <color key="barTintColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </tabBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNu-ou-CPx">
-                                <rect key="frame" x="0.0" y="517" width="157" height="51"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2DN-sC-SKH" kind="presentation" modalTransitionStyle="crossDissolve" id="oMp-tw-xjc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYc-HW-Ymc">
-                                <rect key="frame" x="165" y="519" width="155" height="49"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Maps" image="Map Marker-50.png" id="1A2-fg-wa1"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="mapView" destination="y5T-Vy-lmG" id="7fR-nh-iG7"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="669" y="781"/>
+            <point key="canvasLocation" x="993" y="713"/>
         </scene>
         <!--Info-->
         <scene sceneID="nFj-tg-loM">
@@ -155,22 +136,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4X-hE-dpB">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="barTintColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Sheridan Information" id="QrJ-Zc-PeF">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="f3E-Xu-Ns6">
-                                            <connections>
-                                                <segue destination="AzE-wV-p9a" kind="unwind" unwindAction="unwindToThisViewController:" id="CoW-d3-Yop"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7P8-Rz-TMn">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -181,6 +146,22 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pj0-OU-VVj">
                                 <rect key="frame" x="150" y="296" width="20" height="20"/>
                             </activityIndicatorView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4X-hE-dpB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="About Sheridan" id="QrJ-Zc-PeF">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="f3E-Xu-Ns6">
+                                            <connections>
+                                                <segue destination="xa7-ZI-42B" kind="presentation" id="gVo-h9-VMy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -192,11 +173,10 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqW-fm-zzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="AzE-wV-p9a" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1346" y="-639"/>
+            <point key="canvasLocation" x="1087" y="-638"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="0QD-dA-rcx">
             <objects>
                 <viewController id="V6Z-DA-WBu" sceneMemberID="viewController">
@@ -227,12 +207,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings-50.png" id="Hb2-Xe-kSo"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SL-3F-19J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1051" y="723"/>
+            <point key="canvasLocation" x="225" y="713"/>
         </scene>
         <!--Add Room-->
         <scene sceneID="mI5-qu-T6E">
@@ -256,7 +237,7 @@
                                     <navigationItem title="Add Classroom" id="w3b-UU-DFS" propertyAccessControl="none">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="mkG-I8-uV7">
                                             <connections>
-                                                <segue destination="1KW-mI-vma" kind="unwind" unwindAction="unwindToThisViewController:" id="6oW-dJ-NcK"/>
+                                                <segue destination="xa7-ZI-42B" kind="presentation" id="QPk-7O-GNY"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Add" id="7T5-7R-9WP">
@@ -354,9 +335,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iI1-I5-4jx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="1KW-mI-vma" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1619" y="598"/>
+            <point key="canvasLocation" x="2019" y="326"/>
         </scene>
         <!--Rooms-->
         <scene sceneID="Ibh-10-IEj">
@@ -378,11 +358,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Find Classroom" id="w7w-zF-kfJ">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="KTx-fN-oBb">
-                                            <connections>
-                                                <segue destination="xK9-sa-WV3" kind="unwind" unwindAction="unwindToThisViewController:" id="qHT-xK-jSi"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="KTx-fN-oBb"/>
                                         <barButtonItem key="rightBarButtonItem" id="er7-ng-YZX"/>
                                     </navigationItem>
                                 </items>
@@ -402,9 +378,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cu3-1o-FMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="xK9-sa-WV3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1679" y="-88"/>
+            <point key="canvasLocation" x="1671" y="-86"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7ui-p4-2ZX">
@@ -425,7 +400,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="plf-4B-KvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079" y="57"/>
+            <point key="canvasLocation" x="1073" y="51"/>
         </scene>
         <!--Favourites View Controller-->
         <scene sceneID="9IO-JX-fue">
@@ -439,19 +414,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="brq-nh-33O">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="barTintColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Favorites" id="QW5-N8-JwQ">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="nRP-PA-Xgl"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Add " id="2wn-Bu-RaJ"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="twn-bt-8Dw">
                                 <rect key="frame" x="0.0" y="88" width="320" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -465,16 +427,31 @@
                                 <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="brq-nh-33O">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Favorites" id="QW5-N8-JwQ">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="nRP-PA-Xgl"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Add " id="2wn-Bu-RaJ"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="6vU-M8-MxJ"/>
                     <navigationItem key="navigationItem" id="6Ys-LH-LMX"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BI-QM-IdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="669" y="1445"/>
+            <point key="canvasLocation" x="602" y="1346"/>
         </scene>
         <!--Add Favourites View Controller-->
         <scene sceneID="wm7-Po-tLJ">
@@ -547,7 +524,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1V-Xe-psP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="283" y="1445"/>
+            <point key="canvasLocation" x="225" y="1346"/>
         </scene>
         <!--Edit Favourites View Controller-->
         <scene sceneID="V0W-vZ-cy9">
@@ -620,14 +597,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juD-P6-Oxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1051" y="1445"/>
+            <point key="canvasLocation" x="993" y="1353"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7kf-eu-23e">
+            <objects>
+                <tabBarController id="W3F-MN-Nhp" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JnZ-Gm-5f4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2SJ-Dp-BqU"/>
+                        <segue destination="V6Z-DA-WBu" kind="relationship" relationship="viewControllers" id="OMk-9A-G7Z"/>
+                        <segue destination="2DN-sC-SKH" kind="relationship" relationship="viewControllers" id="pdb-lx-Chg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PhC-XS-Zdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="713"/>
         </scene>
     </scenes>
     <resources>
         <image name="1427768975_0007_Location.png" width="128" height="128"/>
+        <image name="Map Marker-50.png" width="25" height="25"/>
+        <image name="Settings-50.png" width="25" height="25"/>
         <image name="addNew.png" width="25" height="25"/>
         <image name="info.png" width="25" height="25"/>
         <image name="roomIcon.png" width="25" height="25"/>
     </resources>
-    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+    <inferredMetricsTieBreakers>
+        <segue reference="EYi-Zj-eFJ"/>
+    </inferredMetricsTieBreakers>
 </document>
